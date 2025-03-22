@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% block title %}
+        Home | Ilahia Law College
+      {% endblock %}
+    </title>
+
+    <!-- Favicon link -->
+    <link rel="icon" href="static/images/ilahialogo.png" type="image/png" style="width: auto; height: auto;" />
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="static/plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="static/plugins/slick/slick.css" />
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="static/plugins/themify-icons/themify-icons.css" />
+    <!-- animation css -->
+    <link rel="stylesheet" href="static/plugins/animate/animate.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="static/plugins/aos/aos.css" />
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="static/plugins/venobox/venobox.css" />
+
+    <!-- Main Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+  </head>
+
+  <body>
+
+    <div class="loader-container">
+      <!-- Centered Logo Image -->
+      <img src="static/images/logo1.png" alt="Ilahia Law College Logo" class="loader-logo">
+      
+      <!-- Animated Loading Text -->
+      <div class="loader"></div>
+    </div>
+
+    <!-- header -->
+    <header class="fixed-top header">
+      <!-- top header -->
+      <div class="top-header py-2 bg-white">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-lg-4 text-center text-lg-left">
+              <a class="text-light mr-3" href="callto:+443003030266"><strong>CALL</strong> +91 300 303 0266</a>
+              <ul class="list-inline d-inline">
+                <li class="list-inline-item mx-0">
+                  <a class="d-inline-block p-2 text-light" href="#"><i class="ti-facebook"></i></a>
+                </li>
+                <li class="list-inline-item mx-0">
+                  <a class="d-inline-block p-2 text-light" href="#"><i class="ti-twitter-alt"></i></a>
+                </li>
+                <li class="list-inline-item mx-0">
+                  <a class="d-inline-block p-2 text-light" href="#"><i class="ti-linkedin"></i></a>
+                </li>
+                <li class="list-inline-item mx-0">
+                  <a class="d-inline-block p-2 text-light" href="https://www.instagram.com/ilahialaw?igsh=MTFpb3ZrMnl0bTMx"><i class="ti-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <li class="list-inline-item">
+                  <a class="text-uppercase text-light p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- navbar -->
+      <div class="navigation w-100">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand" href="/"><img src="static/images/ilahialogo.png" alt="logo" class="logo"></a>
+            <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item dropdown view">
+                  <a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="about">College Profile</a>
+                    <a class="dropdown-item" href="managements">Management</a>
+                    <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
+                    <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
+                    <a class="dropdown-item" href="vicechairmans_desk">Vice Chairman's Desk</a>
+                    <a class="dropdown-item" href="administrator_desk">Administrator’s Desk</a>
+                  </div>
+                </li>
+                <li class="nav-item @@courses">
+                  <a class="nav-link" href="courses">COURSES</a>
+                </li>
+                <li class="nav-item dropdown view">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMISSIONS</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="admission_process">Admission Process</a>
+                    <a class="dropdown-item" href="fee_structure">Fee Structure</a>
+                </li>
+                <li class="nav-item @@courses">
+                  <a class="nav-link" href="academics">ACADEMICS</a>
+                </li>
+                <li class="nav-item @@programs">
+                  <a class="nav-link" href="programs">PROGRAMS</a>
+                </li>
+                <li class="nav-item dropdown view">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CAMPUS LIFE</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="gallery">Gallery</a>
+                    <a class="dropdown-item" href="facilities">Facilities</a>
+                    <a class="dropdown-item" href="achievements">Our Achievements</a>
+                    <a class="dropdown-item" href="statutory">Statutory Units</a>
+                  </div>
+                </li>
+                <li class="nav-item @@contact">
+                  <a class="nav-link" href="contactpage">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content rounded-0 border-0 p-4">
+          <div class="modal-header border-0">
+            <h3>CONTACT US</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" class="row">
+              <div class="col-12">
+                <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name" />
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone" />
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control mb-3" id="loginMessage" name="loginMessage" placeholder="Message" />
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Contact Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp and Call Buttons -->
+    <div class="fixed-buttons">
+      <!-- WhatsApp Button -->
+      <a href="" class="btn-whatsapp-pulse whatsapp-button btn btn-success" aria-label="WhatsApp Us" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+      <!-- Call Button -->
+      <a href="" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- footer -->
+    <footer>
+<!-- footer content -->
+<div class="footer bg-footer section border-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+        <!-- logo -->
+        <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="static/images/ilahialogo.png" alt="logo" style="height: 100px; width: 100px"/></a>
+        <ul class="list-unstyled text-white">
+          <li class="mb-2">Ilahi Law College, 123 Justice Road, New Delhi, India</li>
+          <li class="mb-2">+91 98765 43210</li>
+          <li class="mb-2">ilahialaw@gmail.com</li>
+          <li class="mb-2">Monday - Friday: 9:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+      <!-- about -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+        <h4 class="text-white mb-5">ABOUT</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="text-color" href="about">About Us</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="managements">Management</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="admission_process">Admissions</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- academics -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+        <h4 class="text-white mb-5">ACADEMICS</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="text-color" href="courses">Courses</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="facilities">Facilities</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="programs">Programs</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="gallery">Gallery</a>
+          </li>
+        </ul>
+      </div>
+      <!-- student support -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+        <h4 class="text-white mb-5">STUDENT SUPPORT</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="text-color" href="">Internships</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">Legal Aid Clinic</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">Career Guidance</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">FAQs</a>
+          </li>
+        </ul>
+      </div>
+      <!-- research & publications -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+        <h4 class="text-white mb-5">RESEARCH & PUBLICATIONS</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a class="text-color" href="">Law Journals</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">Research Papers</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">Conferences</a>
+          </li>
+          <li class="mb-3">
+            <a class="text-color" href="">Publications</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- copyright -->
+      <div class="copyright py-4 bg-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7 text-sm-left text-center text-white">
+              <p class="mb-0 text-white">
+                Copyright<script>
+                           var CurrentYear = new Date().getFullYear()
+                           document.write(CurrentYear)
+                         </script>© Developed and Designed By <a href="https://www.inspirezesttechnologies.com/"><b>Inspirezest Technologies</b></a>
+              </p>All Rights Reserved.
+            </div>
+            <div class="col-sm-5 text-sm-right text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="d-inline-block p-2" href=""><i class="ti-facebook text-white"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="d-inline-block p-2" href=""><i class="ti-twitter-alt text-white"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="d-inline-block p-2" href="https://www.instagram.com/ilahialaw?igsh=MTFpb3ZrMnl0bTMx"><i class="ti-instagram text-white"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="d-inline-block p-2" href=""><i class="ti-dribbble text-white"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- jQuery -->
+    <script src="static/plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="static/plugins/slick/slick.min.js"></script>
+    <!-- aos -->
+    <script src="static/plugins/aos/aos.js"></script>
+    <!-- venobox popup -->
+    <script src="static/plugins/venobox/venobox.min.js"></script>
+    <!-- mixitup filter -->
+    <script src="static/plugins/mixitup/mixitup.min.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+    <script src="static/plugins/google-map/gmap.js"></script>
+
+    <!-- Main Script -->
+    <script src="static/js/script.js"></script>
+    <script src="static/js/loader.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

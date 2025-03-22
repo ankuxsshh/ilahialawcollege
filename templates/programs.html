@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+  <!-- page title -->
+  <section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb">
+            <li class="list-inline-item">
+              <a class="h2 text-primary font-secondary" href="programs.html">Programs</a>
+            </li>
+            <li class="list-inline-item text-white h3 font-secondary"></li>
+          </ul>
+          <p class="text-lighten">
+            Home <i class="fa-solid fa-angles-right"></i> Programs
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /page title -->
+
+  <!-- events -->
+  <section class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <h2 class="mb-0 text-nowrap mr-3" data-aos="zoom-in">Upcoming Events</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+            <div>
+              <a href="events.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block" data-aos="flip-down">See All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <!-- event -->
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative" data-aos="zoom-out">
+              <img class="card-img-top rounded-0" src="https://www.scconline.com/blog/wp-content/uploads/2024/11/AIL-NHRC-National-Moot-Court-Competition.jpg" alt="event thumb" />
+              <div class="card-date">
+                <span>10</span><br />March
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- location -->
+              <p>
+                <i class="ti-location-pin text-primary mr-2" data-aos="zoom-in"></i>Ilahia Law College, Kerala
+              </p>
+              <a href="event-single.html"><h4 class="card-title" data-aos="zoom-out">National Moot Court Competition 2025</h4></a>
+            </div>
+          </div>
+        </div>
+        <!-- event -->
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative" data-aos="zoom-out">
+              <img class="card-img-top rounded-0" src="https://law.ipemgzb.ac.in/events/wp-content/uploads/2023/07/legal-awareness-camp.jpg" alt="event thumb" />
+              <div class="card-date">
+                <span>15</span><br />March
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- location -->
+              <p>
+                <i class="ti-location-pin text-primary mr-2" data-aos="zoom-in"></i>Kottayam, Kerala
+              </p>
+              <a href="event-single.html"><h4 class="card-title" data-aos="zoom-out">Legal Awareness Camp: Know Your Rights</h4></a>
+            </div>
+          </div>
+        </div>
+        <!-- event -->
+        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+          <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative" data-aos="zoom-in">
+              <img class="card-img-top rounded-0" src="https://www.slidegeeks.com/media/catalog/product/cache/1280x720/S/o/Social_Media_Cyber_Crime_Ppt_PowerPoint_Presentation_Ideas_File_Formats_Slide_1.jpg" alt="event thumb" />
+              <div class="card-date">
+                <span>20</span><br />March
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- location -->
+              <p>
+                <i class="ti-location-pin text-primary mr-2" data-aos="zoom-in"></i>Ernakulam, Kerala
+              </p>
+              <a href="event-single.html"><h4 class="card-title" data-aos="zoom-out">Seminar on Cyber Law & Digital Rights</h4></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile see all button -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="events.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block" data-aos="zoom-in">See All</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /events -->
+{% endblock %}
