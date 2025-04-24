@@ -359,7 +359,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #1a1a37dc;
+  background: #1a1a3742;
   opacity: .5;
 }
 
@@ -560,7 +560,7 @@ textarea.form-control {
 
 .navbar-nav {
   padding-left: 30px;
-  background: #50addb;
+  background: #ffffff00;
 }
 
 @media (max-width: 991px) {
@@ -588,7 +588,7 @@ textarea.form-control {
 
 .nav-item .nav-link {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-item::before {
@@ -617,19 +617,19 @@ textarea.form-control {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: #000000a9;
 }
 
 link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #fff;
+  color: #444444a2;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-  color: #fff;
+  color: #000000a9;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
