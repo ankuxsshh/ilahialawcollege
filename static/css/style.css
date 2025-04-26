@@ -620,9 +620,15 @@ textarea.form-control {
   color: #000000a9;
 }
 
+/* Active Nav Link */
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffffa2;
+  background-color: #96cbeb;
+}
 link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #444444a2;
+  color: #ffffffa2;
+  background-color: #96cbeb;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
@@ -633,7 +639,7 @@ link:focus,
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 40px 0px;
+  padding: 17px;
 }
 
 @media (max-width: 991px) {
@@ -807,7 +813,7 @@ link:focus,
 }
 
 .feature-blocks {
-  margin-top: -95px;
+  margin-top: 20px;
   padding-left: 100px;
   padding-top: 60px;
   padding-right: 30%;
