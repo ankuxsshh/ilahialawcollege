@@ -12,7 +12,6 @@
     <link rel="icon" href="static/images/ilahialogo.png" type="image/png" style="width: auto; height: auto;" />
 
     <!-- mobile responsive meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- Font Awesome -->
@@ -36,7 +35,6 @@
     <link href="static/css/style.css" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -79,17 +77,17 @@
             <!-- Right-side Contact & Social -->
             <div class="col-md-2 text-md-right text-center">
               <div>
-                <strong class="text-dark"><i class="ri-phone-fill fs-5"></i> +91 98765 43210</strong><br/>
+                <strong class="text-dark"><i class="ri-phone-fill fs-5"></i> +91 79079 95275</strong><br/>
                 <br>
-                <a href="mailto:glcekm@hotmail.com" style="font-weight: 600; color: #1e1e4b !important;"><i class="ri-mail-line fs-5"></i> ilahialaw@gmail.com</a>
+                <a href="mailto:ilahialaw@gmail.com" style="font-weight: 600; color: #1e1e4b !important;"><i class="ri-mail-line fs-5"></i> ilahialaw@gmail.com</a>
               </div>
             </div>
               <br>
             <div class="col-md-2 text-md-right text-center">
               <div class="mt-2">
-                <a href="#" class="mx-1"><i class="fab fa-facebook text-dark fs-3"></i></a>
-                <a href="#" class="mx-1"><i class="fab fa-youtube text-danger fs-3"></i></a>
-                <small class="text-muted ml-2" style="font-weight: 600; color: #1e1e4b !important;">April 24, 2025</small>
+                {% comment %} <a href="#" class="mx-1"><i class="fab fa-facebook text-dark fs-3"></i></a> {% endcomment %}
+                <a href="https://www.instagram.com/ilahia.law/?igsh=MWJpNjd6N203YXBsag%3D%3D#" class="mx-1"><i class="fab fa-instagram text-dark fs-3"></i></a>
+                {% comment %} <small class="text-muted ml-2" style="font-weight: 600; color: #1e1e4b !important;">April 24, 2025</small> {% endcomment %}
               </div>
             </div>
           </div>
@@ -123,6 +121,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="admission_process">Admission Process</a>
                   <a class="dropdown-item" href="fee_structure">Fee Structure</a>
+                </div>
               </li>
               <li class="nav-item @@programs">
                 <a class="nav-link" href="programs">PROGRAMS</a>
@@ -173,14 +172,19 @@
       </div>
     </div>
 
-    <!-- WhatsApp and Call Buttons -->
-    <div class="fixed-buttons">
-      <!-- WhatsApp Button -->
-      <a href="" class="btn-whatsapp-pulse whatsapp-button btn btn-success" aria-label="WhatsApp Us" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- WhatsApp and Call Buttons -->
+<div class="fixed-buttons">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917907995275" class="btn-whatsapp-pulse whatsapp-button btn btn-success" aria-label="WhatsApp Us" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-      <!-- Call Button -->
-      <a href="" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
-    </div>
+  <!-- Call Button -->
+  <a href="tel:+917907995275" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
+
 
     {% block content %}
 
@@ -285,9 +289,9 @@
             <div class="col-sm-7 text-sm-left text-center text-white">
               <p class="mb-0 text-white">
                 Copyright<script>
-                           var CurrentYear = new Date().getFullYear()
-                           document.write(CurrentYear)
-                         </script>© Developed and Designed By <a href="https://www.inspirezesttechnologies.com/"><b>Inspirezest Technologies</b></a>
+  document.write(new Date().getFullYear());
+</script>
+© Developed and Designed By <a href="https://www.inspirezesttechnologies.com/"><b>Inspirezest Technologies</b></a>
               </p>All Rights Reserved.
             </div>
             <div class="col-sm-5 text-sm-right text-center">

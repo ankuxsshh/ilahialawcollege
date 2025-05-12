@@ -33,4 +33,5 @@ urlpatterns = [
     path("complaint_cell", views.complaint_cell, name="complaint_cell"),
     path("legal_aid_clinic", views.legal_aid_clinic, name="legal_aid_clinic"),
     path("statutory", views.statutory, name="statutory"),
+    path("merit", views.merit, name="merit"),
 ]

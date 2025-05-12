@@ -9,7 +9,7 @@ body {
 p,
 .paragraph {
   font-weight: 400;
-  color: #5c5c77;
+  color: #000000;
   font-size: 15px;
   line-height: 1.6;
   font-family: 'Montserrat', sans-serif;
@@ -625,6 +625,7 @@ textarea.form-control {
   color: #ffffffa2;
   background-color: #96cbeb;
 }
+
 link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: #ffffffa2;
@@ -1387,21 +1388,35 @@ html {
 .loader-logo {
   width: 90px;
   height: auto;
-  margin-bottom: 5px; /* Space between logo and loader text */
+  margin-bottom: 5px;
+
+  /* Mobile adjustment */
+  @media (max-width: 768px) {
+    width: 60px;
+    /* Reduced logo size for mobile */
+  }
 }
 
 .loader {
   width: fit-content;
   font-size: 30px;
-  font-family: system-ui, sans-serif;
+
+  /* Mobile font size adjustment */
+  @media (max-width: 768px) {
+    font-size: 20px;
+    /* Smaller text for mobile */
+  }
+
+  font-family: system-ui,
+  sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #50addb00;
   -webkit-text-stroke: 1px #50addb;
-  background:
-    radial-gradient(0.71em at 50% 1em, #50acdb 99%, #50addb00 101%) calc(50% - 1em) 1em / 2em 200% repeat-x text,
-    radial-gradient(0.71em at 50% -0.5em, #50addb00 99%, #50acdb 101%) 50% 1.5em / 2em 200% repeat-x text;
-  animation: l10-0 0.8s linear infinite alternate, l10-1 4s linear infinite;
+  background: radial-gradient(0.71em at 50% 1em, #50acdb 99%, #50addb00 101%) calc(50% - 1em) 1em / 2em 200% repeat-x text,
+  radial-gradient(0.71em at 50% -0.5em, #50addb00 99%, #50acdb 101%) 50% 1.5em / 2em 200% repeat-x text;
+  animation: l10-0 0.8s linear infinite alternate,
+  l10-1 4s linear infinite;
 }
 
 .loader:before {
@@ -1417,5 +1432,78 @@ html {
 @keyframes l10-1 {
   to {
     background-position-y: -0.5em, 0;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .mobile-logo {
+    height: 70px !important;
+    margin-right: 10px !important;
+  }
+
+  .mobile-header-text h5 {
+    font-size: 1rem !important;
+  }
+
+  .mobile-header-text small {
+    font-size: 0.7rem !important;
+  }
+
+  .mobile-contact {
+    font-size: 0.9rem !important;
+  }
+
+  .mobile-social .fs-3 {
+    font-size: 1.5rem !important;
+  }
+
+  .mobile-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .fixed-buttons {
+    bottom: 70px !important;
+    right: 15px !important;
+  }
+
+  .btn-whatsapp-pulse {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  footer .col-lg-4,
+  footer .col-lg-2 {
+    margin-bottom: 2rem;
+  }
+
+  footer h4 {
+    font-size: 1.1rem;
+  }
+
+  footer li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .loader-logo {
+    width: 60px !important;
+  }
+
+  .loader {
+    font-size: 18px !important;
+  }
+
+  .mobile-header-text {
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  .mobile-nav .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
   }
 }
