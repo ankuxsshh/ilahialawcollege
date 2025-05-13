@@ -34,4 +34,5 @@ urlpatterns = [
     path("legal_aid_clinic", views.legal_aid_clinic, name="legal_aid_clinic"),
     path("statutory", views.statutory, name="statutory"),
     path("merit", views.merit, name="merit"),
+    path("rules", views.rules, name="rules"),
 ]

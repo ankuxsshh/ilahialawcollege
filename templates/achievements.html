@@ -1,78 +1,37 @@
-{% extends 'base.html' %}Achievements Desk | Ilahia Law College{% block content %}
-  <!-- page title -->
-  <section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <ul class="list-inline custom-breadcrumb">
-            <li class="list-inline-item">
-              <a class="h2 text-primary font-secondary" href="@@page-link">Achievements</a>
-            </li>
-            <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
-          </ul>
-          <p class="text-lighten">
-            Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i> Achievements
-          </p>
-        </div>
+{% extends 'base.html' %}
+{% block content %}
+<!-- Page Title Section -->
+<section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item">
+            <a class="h2 text-primary font-secondary" href="#">Achievements</a>
+          </li>
+          <li class="list-inline-item text-white h3 font-secondary"></li>
+        </ul>
+        <p class="text-lighten">
+          Home <i class="fa-solid fa-angles-right"></i> Campus Life <i class="fa-solid fa-angles-right"></i> Achievements
+        </p>
       </div>
     </div>
-  </section>
-  <!-- /page title -->
-
-<!-- Call to Action Section -->
-<section class="section cta-section bg-primary text-white text-center py-5 mt-5">
-  <div class="container">
-    <h2 class="text-white" data-aos="fade-left">Join Us in Making History!</h2>
-    <p class="mb-4" data-aos="fade-left">Be part of our journey as we strive for excellence in academics, co-curricular activities, and community service.</p>
-    <a href="admission_process" class="btn btn-light" data-aos="fade-left">Explore Admissions</a>
   </div>
 </section>
-<!-- /Call to Action Section -->
+<!-- /Page Title -->
 
 <!-- Achievements Section -->
 <section class="section achievements-section">
   <div class="container">
-    <div class="row">
-      <!-- Achievement Item 1 -->
-      <div class="col-md-3 mb-4">
-        <div class="card shadow-lg border-0 h-100">
-          <img src="https://img.freepik.com/premium-photo/moot-court-competitions-ar-generative-ai_1198230-110434.jpg" class="card-img-top rounded-top" alt="Moot Court Competition" data-aos="fade-left">
-          <div class="card-body">
-            <h5 class="card-title font-secondary text-primary" data-aos="fade-left">National Moot Court Competition Winners</h5>
-            <p class="card-text" data-aos="fade-left">Our students secured first place in the prestigious National Moot Court Competition 2023, showcasing their exceptional legal knowledge and advocacy skills.</p>
-          </div>
-        </div>
-      </div>
+    <div class="row justify-content-center">
 
-      <!-- Achievement Item 2 -->
+      <!-- Card 4: Ashly Sunny Photography Achievement -->
       <div class="col-md-3 mb-4">
         <div class="card shadow-lg border-0 h-100">
-          <img src="https://blog.ipleaders.in/wp-content/uploads/2020/04/Canva-Lawyeroffice.StatueofJusticewithscalesandlawyerworkingonalaptop.Legallawadviceandjusticeconcept-reduced.jpg" class="card-img-top rounded-top" alt="Legal Aid Camp" data-aos="fade-left">
+          <img src="static/images/ashley.jpeg" class="card-img-top rounded-top" alt="Photography Award" data-aos="fade-up">
           <div class="card-body">
-            <h5 class="card-title font-secondary text-primary" data-aos="fade-left">Outstanding Legal Aid Camp</h5>
-            <p class="card-text" data-aos="fade-left">Organized a successful legal aid camp, providing pro bono legal services to over 500 individuals and raising awareness about human rights and legal remedies.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Achievement Item 3 -->
-      <div class="col-md-3 mb-4">
-        <div class="card shadow-lg border-0 h-100">
-          <img src="https://img.freepik.com/premium-photo/law-justice-concept-lady-scale-generate-ai_98402-97851.jpg" class="card-img-top rounded-top" alt="Research Paper Award" data-aos="fade-left">
-          <div class="card-body" data-aos="fade-left">
-            <h5 class="card-title font-secondary text-primary" data-aos="fade-left">Best Research Paper Award</h5>
-            <p class="card-text" data-aos="fade-left">Faculty and students jointly won the Best Research Paper Award at an international conference on constitutional law.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Achievement Item 4 -->
-      <div class="col-md-3 mb-4">
-        <div class="card shadow-lg border-0 h-100">
-          <img src="https://media.istockphoto.com/id/1355086328/photo/american-football-championship-teams-ready-professional-players-aggressive-face-off-ready-for.jpg?s=612x612&w=0&k=20&c=SyOy0AjIloVMnn5aB9nuaTRghs1PlHy5fZDMGs2pVjc=" class="card-img-top" alt="Sports Achievements" data-aos="fade-left">
-          <div class="card-body">
-            <h5 class="card-title font-secondary text-primary" data-aos="fade-left">Excellence in Sports</h5>
-            <p class="card-text" data-aos="fade-left">Our law students won the intercollegiate volleyball championship and several other accolades in sports, proving their prowess on and off the field.</p>
+            <h5 class="card-title text-primary font-secondary">Photography Competition</h5>
+            <p class="card-text">Ashly Sunny (3 Year LLB) secured <strong>A Grade</strong> in Photography at MG University Kalolsavam held at Al-Azhar College, Thodupuzha.</p>
           </div>
         </div>
       </div>
@@ -80,44 +39,4 @@
   </div>
 </section>
 <!-- /Achievements Section -->
-
-<!-- Fun Facts Section -->
-<section class="section-sm bg-primary">
-  <div class="container">
-    <div class="row" data-aos="zoom-out">
-      <!-- Fun Fact 1 -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0" data-aos="fade-left">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="20">0</h2>
-          <h5 class="text-white">National Level Competitions Won</h5>
-        </div>
-      </div>
-      <!-- Fun Fact 2 -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0" data-aos="fade-left">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="15">0</h2>
-          <h5 class="text-white">Research Papers Published</h5>
-        </div>
-      </div>
-      <!-- Fun Fact 3 -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0" data-aos="fade-left">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="500">0</h2>
-          <h5 class="text-white">Pro Bono Cases Handled</h5>
-        </div>
-      </div>
-      <!-- Fun Fact 4 -->
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0" data-aos="fade-left">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
-          <h5 class="text-white">Alumni in Prestigious Positions</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Fun Facts Section -->
-
-  <br>
-
-  {% endblock %}
+{% endblock %}

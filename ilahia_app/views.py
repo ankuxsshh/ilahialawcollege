@@ -173,3 +173,7 @@ def statutory(request):
 def merit(request):
     """Render the legal aid clinic page."""
     return render(request, "merit.html")
+
+def rules(request):
+    """Render the legal aid clinic page."""
+    return render(request, "rules.html")
