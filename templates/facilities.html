@@ -20,65 +20,186 @@
   </section>
   <!-- /Page Title -->
 
-  <!-- Facility Image Container -->
+  <!-- Facility Cards Section -->
   <section class="py-5">
     <div class="container">
       <h2 class="section-title text-left mb-5" data-aos="fade-in">Campus Facilities</h2>
-      <div class="row g-4"> <!-- g-4 adds horizontal and vertical spacing -->
-        
-        <div class="col-lg-4 col-md-12">
-          <div class="facility-image-container mb-4" data-aos="zoom-in">
-            <img src="static/images/library.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Library" 
-                 style="height: 250px;">
+
+      <!-- First Row - 5 Cards -->
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-4">
+        <!-- Library Card -->
+        <div class="col" data-aos="zoom-in">
+          <div class="facility-image-container h-100">
+            <img src="static/images/library.jpeg" class="w-100 shadow-1-strong" alt="Library" style="height: 250px;" />
             <div class="overlay-text">LAW LIBRARY</div>
           </div>
-          <div class="facility-image-container mb-4" data-aos="zoom-out">
-            <img src="static/images/moot.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Moot Court" 
-                 style="height: 300px;">
-            <div class="overlay-text">MOOT COURT SOCIETY</div>
-          </div>
         </div>
 
-        <div class="col-lg-4">
-          <div class="facility-image-container mb-4" data-aos="zoom-out">
-            <img src="static/images/computer.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Computer Lab" 
-                 style="height: 300px;">
+        <!-- Computer Lab Card -->
+        <div class="col" data-aos="zoom-out">
+          <div class="facility-image-container h-100">
+            <img src="static/images/computer.jpeg" class="w-100 shadow-1-strong" alt="Computer Lab" style="height: 250px;" />
             <div class="overlay-text">COMPUTER LAB</div>
           </div>
-          <div class="facility-image-container mb-4" data-aos="zoom-in">
-            <img src="static/images/hostel.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Hostel" 
-                 style="height: 250px;">
-            <div class="overlay-text">HOSTEL FACILITIES</div>
+        </div>
+
+        <!-- Moot Court Card -->
+        <div class="col" data-aos="zoom-in">
+          <div class="facility-image-container h-100">
+            <img src="static/images/moot.jpeg" class="w-100 shadow-1-strong" alt="Moot Court" style="height: 250px;" />
+            <div class="overlay-text">MOOT COURT</div>
           </div>
         </div>
 
-        <div class="col-lg-4">
-          <div class="facility-image-container mb-4" data-aos="zoom-out">
-            <img src="static/images/bus.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Seminar Hall" 
-                 style="height: 250px;">
-            <div class="overlay-text">BUST TRANSPORTATION</div>
-          </div>
-          <div class="facility-image-container mb-4" data-aos="zoom-in">
-            <img src="static/images/ground.jpeg" 
-                 class="w-100 shadow-1-strong" 
-                 alt="Sports Complex" 
-                 style="height: 300px;">
-            <div class="overlay-text">SPORTS AND RECREATION COMPLEX</div>
+        <!-- AC Facilities Card -->
+        <div class="col" data-aos="zoom-out">
+          <div class="facility-image-container h-100">
+            <img src="static/images/air.jpeg" class="w-100 shadow-1-strong" alt="AC Facilities" style="height: 250px;" />
+            <div class="overlay-text">AIR CONDITIONED FACILITIES</div>
           </div>
         </div>
 
+        <!-- College Ground Card -->
+        <div class="col" data-aos="zoom-in">
+          <div class="facility-image-container h-100">
+            <img src="static/images/ground.jpeg" class="w-100 shadow-1-strong" alt="College Ground" style="height: 250px;" />
+            <div class="overlay-text">SPORTS GROUND</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row - 2 Cards -->
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+        <!-- Hostel Card -->
+        <div class="col" data-aos="zoom-out">
+          <div class="card h-100 shadow">
+            <div class="facility-image-container">
+              <div class="row gx-2 m-0">
+                <!-- Added row for two images -->
+                <!-- Boys Hostel Image -->
+                <div class="col-6">
+                  <div class="hostel-image-container">
+                    <img src="static/images/boys.jpeg" class="w-100" alt="Boys Hostel" style="height: 300px; object-fit: cover;" />
+                    <div class="overlay-text">BOYS HOSTEL</div>
+                  </div>
+                </div>
+
+                <!-- Girls Hostel Image -->
+                <div class="col-6">
+                  <div class="hostel-image-container">
+                    <img src="static/images/girls.jpeg" class="w-100" alt="Girls Hostel" style="height: 300px; object-fit: cover;" />
+                    <div class="overlay-text">GIRLS HOSTEL</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Hostel Accommodation</h5>
+              <p class="card-text">
+                The Law College has two separate hostels inside the campus:<ul class="list-unstyled">
+                  <li class="mb-3">
+                    <strong>Boys Hostel:</strong><br />
+                    Capacity: 100 students<br />
+                    Warden: Mohammad Aslam
+                  </li>
+                  <li>
+                    <strong>Girls Hostel:</strong><br />
+                    Capacity: 150 students<br />
+                    Matron: Mrs. Shyla Raghu
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transportation Card -->
+        <div class="col" data-aos="zoom-in">
+          <div class="card h-100 shadow">
+            <div class="facility-image-container">
+              <img src="static/images/bus.jpeg" class="card-img-top" alt="Bus Transportation" style="height: 300px;" />
+              <div class="overlay-text">BUS TRANSPORTATION</div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Transport Routes</h5>
+              <div class="card-text">
+                <ul class="list-unstyled mb-0">
+                  <li>BUS 2: ALUVA (KL17-3894)</li>
+                  <br />
+                  <li>BUS 3: KALADY (KL17J-5306)</li>
+                  <br />
+                  <li>BUS 4: PERINGALA (KL17F-8843)</li>
+                  <br />
+                  <li>BUS 6: PAIGOTTOOR (KL17H-4312)</li>
+                  <br />
+                  <li>BUS 7: KOTHAMANGALAM (KL17C-7340)</li>
+                  <br />
+                  <li>THODUPUZHA (KL17N-6929)</li>
+                  <br />
+                  <li>THRIPPUNITHURA (KL17N-5892)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- /Facility Image Container -->
+  <!-- /Facility Cards Section -->
+
+  <style>
+    .facility-image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    
+    .overlay-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 1rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .facility-image-container img {
+      transition: transform 0.3s ease;
+    }
+
+    .facility-image-container:hover img {
+      transform: scale(1.03);
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+    }
+
+      .hostel-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .hostel-image-container img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hostel-image-container:hover img {
+    transform: scale(1.03);
+  }
+
+  .facility-image-container .row {
+    margin: 0 !important;
+  }
+  </style>
 {% endblock %}
