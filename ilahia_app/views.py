@@ -177,3 +177,8 @@ def merit(request):
 def rules(request):
     """Render the legal aid clinic page."""
     return render(request, "rules.html")
+
+def admindesk(request):
+    """Render the legal aid clinic page."""
+    return render(request, "admindesk.html")
+

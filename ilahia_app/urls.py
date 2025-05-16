@@ -35,4 +35,5 @@ urlpatterns = [
     path("statutory", views.statutory, name="statutory"),
     path("merit", views.merit, name="merit"),
     path("rules", views.rules, name="rules"),
+    path("admindesk", views.admindesk, name="admindesk"),
 ]

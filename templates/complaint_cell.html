@@ -18,4 +18,13 @@
     </div>
   </section>
   <!-- /page title -->
+  <!-- CSS override to replace background image -->
+  <style>
+    section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+      background-image: url('static/images/banner1.JPG') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 {% endblock %}

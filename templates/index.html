@@ -1,47 +1,24 @@
 {% extends 'base.html' %} Home | Ilahia Law College {% block content %}
-  <!-- hero slider -->
-  <section class="hero-section overlay" style="position: relative; overflow: hidden;">
-    <!-- Image background with automatic slideshow -->
-    <div class="bg-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-      <img id="slideshow-bg" src="static/images/banner1.JPG" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1s ease-in-out;">
-    </div> 
-    <!-- Content overlay -->
-    <div class="container">
-      <div class="hero-slider">
-        <!-- slider item -->
-        <div class="hero-slider-item">
-          <div class="row">
-            <div class="col-md-8" style="top: 100px;">
-              <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Ilahia Law College Excellence</h1>
-              <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Quality legal education fostering justice, ethics, and professional success.</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
-            </div>
-          </div>
-        </div>
-        <!-- slider item -->
-        <div class="hero-slider-item">
-          <div class="row">
-            <div class="col-md-8" style="top: 100px;">
-              <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Empowering Future Legal Professionals</h1>
-              <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Pioneering justice through quality education, ethics, and professional development.</p>
-              <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
-            </div>
-          </div>
-        </div>
-        <!-- slider item -->
-        <div class="hero-slider-item">
-          <div class="row">
-            <div class="col-md-8" style="top: 100px;">
-             <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Ilahia Law College Excellence</h1>
-             <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Building a strong foundation for a successful legal career worldwide.</p>
-             <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
-            </div>
-          </div>
-        </div>
+<!-- hero section -->
+<section class="hero-section overlay" style="position: relative; overflow: hidden;">
+  <!-- Static responsive background image -->
+  <div class="bg-image">
+    <img src="static/images/banner1.JPG" alt="Background Image" class="hero-bg-img">
+  </div>
+  <!-- Content overlay -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" style="top: 100px;">
+        <h1 class="text-white mb-4">Ilahia Law College Excellence</h1>
+        <br>
+        <br>
+        <a href="contact" class="btn btn-primary">Apply now</a>
       </div>
     </div>
-  </section>
-  <!-- /hero slider -->
+  </div>
+</section>
+
+
 
   <!-- about us -->
   <section class="section">
@@ -65,7 +42,7 @@
   </section>
   <!-- /about us -->
 
-<!-- Academics Section -->
+<!-- Academic Programs Section -->
 <section class="academics-section py-5">
   <div class="container">
     <div class="row mb-4">
@@ -74,99 +51,84 @@
       </div>
     </div>
 
-    <!-- First Row of Academic Programs -->
+    <!-- Academic Program Cards -->
     <div class="row">
-      <div class="col-md-3 mb-4">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
         <div class="card h-100 shadow border-0">
-          <img src="static/images/events/2day.png" class="card-img-top" alt="LLB Program" data-aos="flip-up">
+          <img src="static/images/events/2day.png" class="card-img-top" alt="2-day Seminar" data-aos="flip-up">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-up">Two-day national seminar Inaugrated by Mr.B Kemel Pasha (Retired Judge of High Court of Kerala)</h5>
+            <h5 class="card-title text-center font-weight-bold">Two-day national seminar inaugurated by Mr. B Kemel Pasha (Retired Judge of High Court of Kerala)</h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
         <div class="card h-100 shadow border-0">
-          <img src="static/images/events/llbbatch.png" class="card-img-top" alt="3-Year LLB Program" data-aos="flip-down">
+          <img src="static/images/events/llbbatch.png" class="card-img-top" alt="LLB Batch" data-aos="flip-down">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-down">Commencement of first LLB Batch Motivation class- By Mr.Mahesh. G (District Judge)</h5>
+            <h5 class="card-title text-center font-weight-bold">First LLB Batch Motivation class by Mr. Mahesh G (District Judge)</h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
         <div class="card h-100 shadow border-0">
-          <img src="static/images/events/seminar.png" class="card-img-top" alt="Merit LL.B. Program" data-aos="flip-up">
+          <img src="static/images/events/seminar.png" class="card-img-top" alt="Seminar" data-aos="flip-up">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-up">Seminar by Dr. N.l Sajikumar, Associate Professor, Govt Law College, Trivandrum</h5>
+            <h5 class="card-title text-center font-weight-bold">Seminar by Dr. N.L. Sajikumar, Associate Professor, Govt Law College, Trivandrum</h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
         <div class="card h-100 shadow border-0">
-          <img src="static/images/events/republicday.png" class="card-img-top" alt="Management Quota" data-aos="flip-down">
+          <img src="static/images/events/republicday.png" class="card-img-top" alt="Republic Day" data-aos="flip-down">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-down">Republic day festivities in association with Taluk legal services committee</h5>
+            <h5 class="card-title text-center font-weight-bold">Republic Day festivities with Taluk Legal Services Committee</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow border-0">
+          <img src="static/images/events/motivationalclass.png" class="card-img-top" alt="Motivational Class" data-aos="flip-up">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Motivation class by Mr. A.M. Jamal Azhari (School of Quran and Science, Aluva)</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow border-0">
+          <img src="static/images/events/cyber.png" class="card-img-top" alt="Cyber Security" data-aos="flip-down">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Cyber Security awareness programme by DLSA, Kerala Police Cyber Crime Unit, and Sevakh Global</h5>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Second Row of Academic Programs -->
-    <div class="row">
-      <div class="col-md-3 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/motivationalclass.png" class="card-img-top" alt="Diploma Law" data-aos="flip-up">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-up">Motivation class led by Mr. A.M. Jamal Azhari ( School of Quran and Science, Aluva)</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/cyber.png" class="card-img-top" alt="PG Law" data-aos="flip-down">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-down">Cyber Security awareness programme by Ernakulam Dustrict legal services authority, Kerala Police Cyber Crime Unit and Sevakh Global</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/lexmas.png" class="card-img-top" alt="Online Course" data-aos="flip-up">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-up">"Lexmas" Christmas Celebration</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/iftar.png" class="card-img-top" alt="Legal Workshop" data-aos="flip-down">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold section-title text-center" data-aos="flip-down">Iftar Meet</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Second Row -->
+    <!-- /Academic Program Cards -->
   </div>
 </section>
-<!-- /Academics Section -->
+<!-- /Academic Programs Section -->
 
       <!-- Academics Section -->
   <section class="academics-section py-5">
     <div class="container">
       <div class="row mb-4">
-        <div class="col-md-12 text-center">
-          <h2 class="section-title font-weight-bold text-left" data-aos="flip-up">Explore Our Academic Programs</h2>
+        <div class="col-md-12">
+          <h2 class="section-title font-weight-bold" data-aos="flip-up">Courses</h2>
         </div>
       </div>
 
       <!-- Academic Programs -->
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow border-0">
             <img src="https://images.pexels.com/photos/30483129/pexels-photo-30483129/free-photo-of-statue-of-lady-justice-with-scales.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="LLB Program" data-aos="flip-up">
@@ -189,16 +151,16 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
+{% comment %} <div class="col-md-4 mb-4">
   <div class="card h-100 shadow border-0">
     <img src="https://images.pexels.com/photos/5669616/pexels-photo-5669616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Merit LL.B. Program" data-aos="flip-down">
     <div class="card-body">
-      <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">3-Year LL.B. – Merit Seat Admission</h5>
-      <p class="card-text text-muted" data-aos="flip-down">Secure your place in the 3-year LL.B. course through the Kerala Government merit quota process.</p>
+      <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">5-Year LL.B. – Merit Seat Admission</h5>
+      <p class="card-text text-muted" data-aos="flip-down">Secure your place in the 5-year LL.B. course through the Kerala Government merit quota process.</p>
       <a href="merit" class="btn btn-primary btn-sm" data-aos="flip-down">Apply now</a>
     </div>
   </div>
-</div>
+</div> {% endcomment %}
 
         
       </div>
@@ -207,44 +169,57 @@
   </section>
   <!-- /Academics Section -->
 
-<!-- Gallery -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">Legal Insights Gallery</h2>
+  <!-- Gallery -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Legal Insights Gallery</h2>
 
-    <!-- Row 1 -->
-    <div class="row">
-      <div class="col-lg-4 col-md-12 mb-4">
-        <img src="static/images/gallery1.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-        <img src="static/images/gallery2.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Wintry Mountain Landscape" />
-      </div>
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <img src="static/images/gallery1.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
+          <img src="static/images/gallery2.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Wintry Mountain Landscape" />
+        </div>
 
-      <div class="col-lg-4 mb-4">
-        <img src="static/images/gallery3.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
-        <img src="static/images/gallery4.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-      </div>
+        <div class="col-lg-4 mb-4">
+          <img src="static/images/gallery3.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
+          <img src="static/images/gallery4.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
+        </div>
 
-      <div class="col-lg-4 mb-4">
-        <img src="static/images/gallery5.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
-        <img src="static/images/gallery6.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Yosemite National Park" />
-      </div>
+        <div class="col-lg-4 mb-4">
+          <img src="static/images/gallery5.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+          <img src="static/images/gallery6.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Yosemite National Park" />
+        </div>
 
-      <div class="col-lg-4 mb-4">
-        <img src="static/images/galleryyy.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+        <div class="col-lg-4 mb-4">
+          <img src="static/images/galleryyy.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+          <img src="static/images/gallery8.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+        </div>
+
+                <div class="col-lg-4 mb-4">
+          <img src="static/images/gallery9.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
+          <img src="static/images/gallery10.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <img src="static/images/gallery11.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+          <img src="static/images/gallery12.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Yosemite National Park" />
+        </div>
+
       </div>
     </div>
-  </div>
 
-  <!-- Image Modal Overlay -->
-  <div id="imageModal" class="modal-overlay">
-    <img class="modal-image" id="enlargedImage">
-  </div>
-</section>
+    <!-- Image Modal Overlay -->
+    <div id="imageModal" class="modal-overlay">
+      <img class="modal-image" id="enlargedImage" />
+    </div>
+  </section>
 
+  
 <!-- banner-feature -->
 <section class="bg-white py-5">
   <div class="container">
-    <h2 class="section-title text-center mb-5" data-aos="fade-up">Why Choose Law College ?</h2>
+    <h2 class="section-title mb-5" data-aos="fade-up">Why Choose Law College ?</h2>
     <div class="row g-4 justify-content-center">
 
       <!-- 1. Academic Excellence -->
@@ -332,7 +307,7 @@
       <div class="row">
         <div class="col-12 text-center">
           <h6 class="text-white font-secondary mb-0" data-aos="zoom-in">Click to Join the Upcoming Law Workshop</h6>
-          <h2 class="section-title text-white" data-aos="zoom-out">Training in Advanced Legal Practices</h2>
+          <h2 class="section-title text-white text-center" data-aos="zoom-out">Training in Advanced Legal Practices</h2>
           <a href="contact.html" class="btn btn-secondary" data-aos="zoom-in">Join Now</a>
         </div>
       </div>

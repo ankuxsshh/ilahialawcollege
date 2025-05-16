@@ -1,164 +1,198 @@
 {% extends 'base.html' %}
 {% block content %}
+  <!-- Academic Regulations Section -->
+  <section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb">
+            <li class="list-inline-item">
+              <a class="h2 text-primary font-secondary" href="@@page-link">College Regulations</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Academic Regulations Section -->
-<section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
-  <div class="container">
+  <section class="container my-5">
     <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item">
-            <a class="h2 text-primary font-secondary" href="@@page-link">College Regulations</a>
-          </li>
-        </ul>
+      <div class="col-md-12 text-center mb-4">
+        <h2 class="mb-3 fadeInDown text-left">Academic Regulations & Campus Guidelines</h2>
+        <p class="text-muted fadeInUp text-left">Ilahia Law College maintains high standards of academic excellence and campus discipline. Below are the key regulations all students must follow.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="container my-5">
-  <div class="row">
-    <div class="col-md-12 text-center mb-4">
-      <h2 class="mb-3 fadeInDown text-left">Academic Regulations & Campus Guidelines</h2>
-      <p class="text-muted fadeInUp text-left">Ilahia Law College maintains high standards of academic excellence and campus discipline. Below are the key regulations all students must follow.</p>
+    <!-- Academic Regulations -->
+    <div class="row d-flex align-items-stretch">
+      <div class="col-md-6 fadeInLeft mb-4">
+        <div class="card shadow-lg p-4 border-0 h-100">
+          <h3 class="text-primary mb-4"><i class="fas fa-user-graduate mr-2"></i>Academic Policies</h3>
+
+          <div class="regulation-item">
+            <h5 class="text-dark">Attendance Requirements</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-check-circle text-success mr-2"></i>Minimum 75% attendance mandatory
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success mr-2"></i>Medical leave requires documentation
+              </li>
+            </ul>
+          </div>
+
+          <div class="regulation-item mt-4">
+            <h5 class="text-dark">Examination System</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Semester Exams</h6>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-file-alt text-info mr-2"></i>10 semesters (5-year program)
+                  </li>
+                  <li>
+                    <i class="fas fa-file-alt text-info mr-2"></i>6 semesters (3-year program)
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6>Internal Assessment</h6>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-chart-bar text-warning mr-2"></i>2 internal exams
+                  </li>
+                  <li>
+                    <i class="fas fa-presentation text-warning mr-2"></i>1 presentation
+                  </li>
+                  <li>
+                    <i class="fas fa-book text-warning mr-2"></i>1 assignment
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campus Discipline -->
+      <div class="col-md-6 fadeInRight mb-4">
+        <div class="card shadow-lg p-4 border-0 h-100">
+          <h3 class="text-primary mb-4"><i class="fas fa-balance-scale mr-2"></i>Campus Discipline</h3>
+
+          <div class="regulation-item">
+            <h5 class="text-dark">College Hours</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-clock text-primary mr-2"></i>9:30 AM - 3:30 PM
+              </li>
+              <li>
+                <i class="fas fa-exclamation-triangle text-danger mr-2"></i>Latecomers may face disciplinary action
+              </li>
+            </ul>
+          </div>
+
+          <div class="regulation-item mt-4">
+            <h5 class="text-dark">Dress Code</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Male Students</h6>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-tshirt text-info mr-2"></i>Black pants + White shirt
+                  </li>
+                  <li>
+                    <i class="fas fa-certificate text-info mr-2"></i>College badge mandatory
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6>Female Students</h6>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-tshirt text-info mr-2"></i>Black pants + White shirt
+                  </li>
+                  <li>
+                    <i class="fas fa-certificate text-info mr-2"></i>Black blazer + College badge
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Academic Regulations -->
-  <div class="row d-flex align-items-stretch">
-    <div class="col-md-6 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h3 class="text-primary mb-4"><i class="fas fa-user-graduate mr-2"></i>Academic Policies</h3>
-        
-        <div class="regulation-item">
-          <h5 class="text-dark">Attendance Requirements</h5>
+    <!-- Other Regulations -->
+    <div class="row mt-4">
+      <div class="col-md-6 fadeInLeft mb-4">
+        <div class="card shadow-lg p-4 border-0 h-100">
+          <h3 class="text-primary mb-4"><i class="fas fa-book-reader mr-2"></i>Facility Regulations</h3>
           <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle text-success mr-2"></i>Minimum 75% attendance mandatory</li>
-            <li><i class="fas fa-check-circle text-success mr-2"></i>Medical leave requires documentation</li>
+            <li class="mb-3">
+              <h5><i class="fas fa-library text-success mr-2"></i>Library Rules</h5>
+              <p>Strict return deadlines • No marking books • Limited borrowing capacity</p>
+            </li>
+            <li class="mb-3">
+              <h5><i class="fas fa-gavel text-warning mr-2"></i>Moot Court</h5>
+              <p>Mandatory participation • Graded activity • Court etiquette required</p>
+            </li>
           </ul>
         </div>
+      </div>
 
-        <div class="regulation-item mt-4">
-          <h5 class="text-dark">Examination System</h5>
+      <div class="col-md-6 fadeInRight mb-4">
+        <div class="card shadow-lg p-4 border-0 h-100">
+          <h3 class="text-primary mb-4"><i class="fas fa-exclamation-triangle mr-2"></i>Conduct Policies</h3>
           <div class="row">
             <div class="col-md-6">
-              <h6>Semester Exams</h6>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-file-alt text-info mr-2"></i>10 semesters (5-year program)</li>
-                <li><i class="fas fa-file-alt text-info mr-2"></i>6 semesters (3-year program)</li>
-              </ul>
+              <div class="alert alert-danger">
+                <h5><i class="fas fa-ban mr-2"></i>Anti-Ragging</h5>
+                <p class="small">Zero tolerance policy • Immediate suspension • Legal action</p>
+              </div>
             </div>
             <div class="col-md-6">
-              <h6>Internal Assessment</h6>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-chart-bar text-warning mr-2"></i>2 internal exams</li>
-                <li><i class="fas fa-presentation text-warning mr-2"></i>1 presentation</li>
-                <li><i class="fas fa-book text-warning mr-2"></i>1 assignment</li>
-              </ul>
+              <div class="alert alert-warning">
+                <h5><i class="fas fa-female mr-2"></i>Anti-Harassment</h5>
+                <p class="small">Confidential reporting • Committee support • Strict penalties</p>
+              </div>
             </div>
           </div>
+          <h5 class="mt-3"><i class="fas fa-comments mr-2"></i>Grievance Redressal</h5>
+          <p>Approach committee members directly • Written complaints preferred • Resolution within 14 days</p>
         </div>
       </div>
     </div>
 
-    <!-- Campus Discipline -->
-    <div class="col-md-6 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h3 class="text-primary mb-4"><i class="fas fa-balance-scale mr-2"></i>Campus Discipline</h3>
-        
-        <div class="regulation-item">
-          <h5 class="text-dark">College Hours</h5>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-clock text-primary mr-2"></i>9:30 AM - 3:30 PM</li>
-            <li><i class="fas fa-exclamation-triangle text-danger mr-2"></i>Latecomers may face disciplinary action</li>
-          </ul>
-        </div>
-
-        <div class="regulation-item mt-4">
-          <h5 class="text-dark">Dress Code</h5>
+    <!-- General Guidelines -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="card shadow-lg p-4 border-0 bg-light">
+          <h3 class="text-primary mb-4"><i class="fas fa-info-circle mr-2"></i>General Guidelines</h3>
           <div class="row">
-            <div class="col-md-6">
-              <h6>Male Students</h6>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-tshirt text-info mr-2"></i>Black pants + White shirt</li>
-                <li><i class="fas fa-certificate text-info mr-2"></i>College badge mandatory</li>
-              </ul>
+            <div class="col-md-4">
+              <h5><i class="fas fa-bullhorn text-info mr-2"></i>Communication</h5>
+              <p>Check notice boards daily • Monitor college emails • Follow social media</p>
             </div>
-            <div class="col-md-6">
-              <h6>Female Students</h6>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-tshirt text-info mr-2"></i>Black pants + White shirt</li>
-                <li><i class="fas fa-certificate text-info mr-2"></i>Black blazer + College badge</li>
-              </ul>
+            <div class="col-md-4">
+              <h5><i class="fas fa-hand-holding-usd text-success mr-2"></i>Fee Policy</h5>
+              <p>No fee clearance = No promotion • Payment deadlines strict • Installment options available</p>
+            </div>
+            <div class="col-md-4">
+              <h5><i class="fas fa-user-shield text-danger mr-2"></i>Final Authority</h5>
+              <p>Principal's decisions final • Rules subject to change • Management reserves rights</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Other Regulations -->
-  <div class="row mt-4">
-    <div class="col-md-6 fadeInLeft mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h3 class="text-primary mb-4"><i class="fas fa-book-reader mr-2"></i>Facility Regulations</h3>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <h5><i class="fas fa-library text-success mr-2"></i>Library Rules</h5>
-            <p>Strict return deadlines • No marking books • Limited borrowing capacity</p>
-          </li>
-          <li class="mb-3">
-            <h5><i class="fas fa-gavel text-warning mr-2"></i>Moot Court</h5>
-            <p>Mandatory participation • Graded activity • Court etiquette required</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-md-6 fadeInRight mb-4">
-      <div class="card shadow-lg p-4 border-0 h-100">
-        <h3 class="text-primary mb-4"><i class="fas fa-exclamation-triangle mr-2"></i>Conduct Policies</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="alert alert-danger">
-              <h5><i class="fas fa-ban mr-2"></i>Anti-Ragging</h5>
-              <p class="small">Zero tolerance policy • Immediate suspension • Legal action</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="alert alert-warning">
-              <h5><i class="fas fa-female mr-2"></i>Anti-Harassment</h5>
-              <p class="small">Confidential reporting • Committee support • Strict penalties</p>
-            </div>
-          </div>
-        </div>
-        <h5 class="mt-3"><i class="fas fa-comments mr-2"></i>Grievance Redressal</h5>
-        <p>Approach committee members directly • Written complaints preferred • Resolution within 14 days</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- General Guidelines -->
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <div class="card shadow-lg p-4 border-0 bg-light">
-        <h3 class="text-primary mb-4"><i class="fas fa-info-circle mr-2"></i>General Guidelines</h3>
-        <div class="row">
-          <div class="col-md-4">
-            <h5><i class="fas fa-bullhorn text-info mr-2"></i>Communication</h5>
-            <p>Check notice boards daily • Monitor college emails • Follow social media</p>
-          </div>
-          <div class="col-md-4">
-            <h5><i class="fas fa-hand-holding-usd text-success mr-2"></i>Fee Policy</h5>
-            <p>No fee clearance = No promotion • Payment deadlines strict • Installment options available</p>
-          </div>
-          <div class="col-md-4">
-            <h5><i class="fas fa-user-shield text-danger mr-2"></i>Final Authority</h5>
-            <p>Principal's decisions final • Rules subject to change • Management reserves rights</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+  <!-- CSS override to replace background image -->
+  <style>
+    section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+      background-image: url('static/images/banner1.JPG') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 {% endblock %}

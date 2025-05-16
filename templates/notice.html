@@ -1,4 +1,4 @@
-{% extends 'base.html' %} Notice | Ilahia Law College{% block content %}
+{% extends 'base.html' %}Notice | Ilahia Law College{% block content %}
   <!-- page title -->
   <section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
     <div class="container">
@@ -81,4 +81,13 @@
     </div>
   </section>
   <!-- /notice -->
+  <!-- CSS override to replace background image -->
+  <style>
+    section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+      background-image: url('static/images/banner1.JPG') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 {% endblock %}

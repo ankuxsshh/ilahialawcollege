@@ -19,20 +19,20 @@
   </section>
   <!-- /page title -->
 
-      <!-- Academics Section -->
+  <!-- Academics Section -->
   <section class="academics-section py-5">
     <div class="container">
       <div class="row mb-4">
         <div class="col-md-12 text-center">
-          <h2 class="section-title font-weight-bold text-left" data-aos="flip-up">Explore Our Academic Programs</h2>
+          <h2 class="section-title font-weight-bold text-left" data-aos="flip-up">Courses</h2>
         </div>
       </div>
 
       <!-- Academic Programs -->
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow border-0">
-            <img src="https://images.pexels.com/photos/30483129/pexels-photo-30483129/free-photo-of-statue-of-lady-justice-with-scales.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="LLB Program" data-aos="flip-up">
+            <img src="https://images.pexels.com/photos/30483129/pexels-photo-30483129/free-photo-of-statue-of-lady-justice-with-scales.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="LLB Program" data-aos="flip-up" />
             <div class="card-body">
               <h5 class="card-title font-weight-bold section-title" data-aos="flip-up">BA.LLB. – 5-Year Integrated Double Degree Course in Law</h5>
               <p class="card-text text-muted" data-aos="flip-up">A comprehensive undergraduate program that lays the foundation for a career in law.</p>
@@ -43,7 +43,7 @@
 
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow border-0">
-            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="BA LLB Program" data-aos="flip-down">
+            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="BA LLB Program" data-aos="flip-down" />
             <div class="card-body">
               <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">3-Year LL.B. – Unitary Bachelor’s Degree in Law</h5>
               <p class="card-text text-muted" data-aos="flip-down">An integrated program combining arts and law for a multidisciplinary approach.</p>
@@ -52,21 +52,28 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
-  <div class="card h-100 shadow border-0">
-    <img src="https://images.pexels.com/photos/5669616/pexels-photo-5669616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Merit LL.B. Program" data-aos="flip-down">
-    <div class="card-body">
-      <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">3-Year LL.B. – Merit Seat Admission</h5>
-      <p class="card-text text-muted" data-aos="flip-down">Secure your place in the 3-year LL.B. course through the Kerala Government merit quota process.</p>
-      <a href="merit" class="btn btn-primary btn-sm" data-aos="flip-down">Apply now</a>
-    </div>
-  </div>
-</div>
-
-        
+        {% comment %} <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="https://images.pexels.com/photos/5669616/pexels-photo-5669616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Merit LL.B. Program" data-aos="flip-down" />
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">5-Year LL.B. – Merit Seat Admission</h5>
+              <p class="card-text text-muted" data-aos="flip-down">Secure your place in the 5-year LL.B. course through the Kerala Government merit quota process.</p>
+              <a href="merit" class="btn btn-primary btn-sm" data-aos="flip-down">Apply now</a>
+            </div>
+          </div>
+        </div> {% endcomment %}
       </div>
       <!-- /Academic Programs -->
     </div>
   </section>
   <!-- /Academics Section -->
+  <!-- CSS override to replace background image -->
+  <style>
+    section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
+      background-image: url('static/images/banner1.JPG') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 {% endblock %}

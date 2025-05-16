@@ -23,10 +23,12 @@
   <!-- Facility Cards Section -->
   <section class="py-5">
     <div class="container">
-      <h2 class="section-title text-left mb-5" data-aos="fade-in">Campus Facilities</h2>
+      <h2 class="section-title mb-5" data-aos="fade-in">Campus Facilities</h2>
 
       <!-- First Row - 5 Cards -->
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-4">
+      <!-- Row 1: Law Library, Cyber Cell -->
+      <!-- Row 1: Law Library & Cyber Cell -->
+      <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
         <!-- Library Card -->
         <div class="col" data-aos="zoom-in">
           <div class="facility-image-container h-100">
@@ -39,10 +41,13 @@
         <div class="col" data-aos="zoom-out">
           <div class="facility-image-container h-100">
             <img src="static/images/computer.jpeg" class="w-100 shadow-1-strong" alt="Computer Lab" style="height: 250px;" />
-            <div class="overlay-text">COMPUTER LAB</div>
+            <div class="overlay-text">CYBER CELL</div>
           </div>
         </div>
+      </div>
 
+      <!-- Row 2: Moot Court & AC Facilities -->
+      <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
         <!-- Moot Court Card -->
         <div class="col" data-aos="zoom-in">
           <div class="facility-image-container h-100">
@@ -55,15 +60,26 @@
         <div class="col" data-aos="zoom-out">
           <div class="facility-image-container h-100">
             <img src="static/images/air.jpeg" class="w-100 shadow-1-strong" alt="AC Facilities" style="height: 250px;" />
-            <div class="overlay-text">AIR CONDITIONED FACILITIES</div>
+            <div class="overlay-text">AIR CONDITIONED AUDITORIUMS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Ground 1 & Ground 2 -->
+      <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+        <!-- College Ground Card 1 -->
+        <div class="col" data-aos="zoom-in">
+          <div class="facility-image-container h-100">
+            <img src="static/images/ground.jpeg" class="w-100 shadow-1-strong" alt="College Ground 1" style="height: 250px;" />
+            <div class="overlay-text">SPORTS GROUND 1</div>
           </div>
         </div>
 
-        <!-- College Ground Card -->
-        <div class="col" data-aos="zoom-in">
+        <!-- College Ground Card 2 -->
+        <div class="col" data-aos="zoom-out">
           <div class="facility-image-container h-100">
-            <img src="static/images/ground.jpeg" class="w-100 shadow-1-strong" alt="College Ground" style="height: 250px;" />
-            <div class="overlay-text">SPORTS GROUND</div>
+            <img src="static/images/ground 2.jpeg" class="w-100 shadow-1-strong" alt="College Ground 2" style="height: 250px;" />
+            <div class="overlay-text">SPORTS GROUND 2</div>
           </div>
         </div>
       </div>
@@ -100,12 +116,16 @@
                 The Law College has two separate hostels inside the campus:<ul class="list-unstyled">
                   <li class="mb-3">
                     <strong>Boys Hostel:</strong><br />
+                    <br />
                     Capacity: 100 students<br />
+                    <br />
                     Warden: Mohammad Aslam
                   </li>
                   <li>
                     <strong>Girls Hostel:</strong><br />
+                    <br />
                     Capacity: 150 students<br />
+                    <br />
                     Matron: Mrs. Shyla Raghu
                   </li>
                 </ul>
@@ -125,15 +145,15 @@
               <h5 class="card-title">Transport Routes</h5>
               <div class="card-text">
                 <ul class="list-unstyled mb-0">
-                  <li>BUS 2: ALUVA (KL17-3894)</li>
+                  <li>BUS 1: ALUVA (KL17-3894)</li>
                   <br />
-                  <li>BUS 3: KALADY (KL17J-5306)</li>
+                  <li>BUS 2: KALADY (KL17J-5306)</li>
                   <br />
-                  <li>BUS 4: PERINGALA (KL17F-8843)</li>
+                  <li>BUS 3: PERINGALA (KL17F-8843)</li>
                   <br />
-                  <li>BUS 6: PAIGOTTOOR (KL17H-4312)</li>
+                  <li>BUS 4: PAIGOTTOOR (KL17H-4312)</li>
                   <br />
-                  <li>BUS 7: KOTHAMANGALAM (KL17C-7340)</li>
+                  <li>BUS 5: KOTHAMANGALAM (KL17C-7340)</li>
                   <br />
                   <li>THODUPUZHA (KL17N-6929)</li>
                   <br />
@@ -149,11 +169,10 @@
   <!-- /Facility Cards Section -->
 
   <style>
-    .facility-image-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 5px;
-    }
+  .facility-image-container {
+    max-width: 520px;
+    margin: 0 auto; /* center the container */
+  }
     
     .overlay-text {
       position: absolute;
@@ -201,5 +220,13 @@
   .facility-image-container .row {
     margin: 0 !important;
   }
-  </style>
+
+  section.page-title-section.overlay[data-background="static/images/backgrounds/page-title.jpg"] {
+    background-image: url('static/images/banner1.JPG') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+</style>
 {% endblock %}
