@@ -38,15 +38,25 @@
                 <p class="mb-0">5 Years (Full Time)</p>
               </div>
             </li>
-            <li class="d-flex align-items-center mb-3">
-              <i class="ti-wallet text-primary icon-md mr-3"></i>
-              <div>
-                <h6 class="mb-0">FEE</h6>
-                <p class="mb-0">From: $1200 per semester</p>
-              </div>
-            </li>
           </ul>
           <button class="btn btn-primary mt-3" onclick="openPopup()">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Registration Popup -->
+      <div id="registerPopup" class="popup-overlay" style="display: none;">
+        <div class="popup-form">
+          <button class="close-btn" onclick="closePopup()">×</button>
+          <h4 class="mb-3">Register for LL.B. Course</h4>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control mb-3" placeholder="Full Name" required />
+              <input type="email" class="form-control mb-3" placeholder="Email" required />
+              <input type="tel" class="form-control mb-3" placeholder="Phone Number" required />
+              <textarea class="form-control mb-3" placeholder="Message (optional)" rows="3"></textarea>
+              <button type="submit" class="btn btn-success w-100">Submit Application</button>
+            </div>
+          </form>
         </div>
       </div>
 
