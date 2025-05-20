@@ -9,7 +9,7 @@ This module defines the URL patterns for the Ilahia application.
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("about", views.about, name="about"),
+    path("aboutus", views.aboutus, name="aboutus"),
     path("courses", views.courses, name="courses"),
     path("gallery", views.gallery, name="gallery"),
     path("managements", views.managements, name="managements"),
@@ -22,7 +22,9 @@ urlpatterns = [
     path("vicechairmans_desk", views.vicechairmans_desk, name="vicechairmans_desk"),
     path("administrator_desk", views.administrator_desk, name="administrator_desk"),
     path("fiveyears", views.fiveyears, name="fiveyears"),
+    path('send-llb/', views.send_llb, name='send_llb'),
     path("threeyears", views.threeyears, name="threeyears"),
+    path('register-llb/', views.register_llb, name='register_llb'),
     path("academics", views.academics, name="academics"),
     path("programs", views.programs, name="programs"),
     path("facilities", views.facilities, name="facilities"),
@@ -36,4 +38,6 @@ urlpatterns = [
     path("merit", views.merit, name="merit"),
     path("rules", views.rules, name="rules"),
     path("admindesk", views.admindesk, name="admindesk"),
+    path("facultydesk", views.facultydesk, name="facultydesk"),
+    path("committee", views.committee, name="committee"),
 ]

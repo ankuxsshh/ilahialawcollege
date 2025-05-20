@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
   <!-- Page Title Section -->
-  <section class="page-title-section overlay" data-background="static/images/backgrounds/page-title.jpg">
+  <section class="page-title-section overlay" data-background="static/images/title.jpeg">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
@@ -31,17 +31,6 @@
 
       <!-- Management Cards -->
       <div class="row justify-content-center text-center">
-        <!-- Card 1: Principal -->
-        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card border-0 rounded-lg h-100 shadow-sm">
-            <img src="static/images/principal.jpeg" class="card-img-top rounded-top" alt="Principal" />
-            <div class="card-body">
-              <h5 class="card-title mb-1">Principal</h5>
-              <p class="text-dark mb-0">Dr. K.J. Rajan</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Card 2: Chairman -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card border-0 rounded-lg h-100 shadow-sm">
@@ -52,13 +41,25 @@
             </div>
           </div>
         </div>
+
+        <!-- Card 1: Principal -->
+        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 rounded-lg h-100 shadow-sm">
+            <img src="static/images/manager.jpeg" class="card-img-top rounded-top" alt="Principal" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">Manager</h5>
+              <p class="text-dark mb-0">P. M. Azeez</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section
+  </section>
+
   <!-- CSS override to replace background image -->
   <style>
     section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-      background-image: url('static/images/banner1.JPG') !important;
+      background-image: url('static/images/title.jpeg') !important;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

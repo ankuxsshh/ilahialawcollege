@@ -15,9 +15,9 @@ def index(request):
     return render(request, "index.html")
 
 
-def about(request):
+def aboutus(request):
     """Render the about page."""
-    return render(request, "about.html")
+    return render(request, "aboutus.html")
 
 
 def courses(request):
@@ -51,7 +51,7 @@ def send_message(request):
         # Compose the email
         subject_email = f"New Inquiry : {subject}"
         message_email = f"""
-        You have received a new message from {name} 
+        You have received a new enquiry from {name} 
 
         Email :
         ({email}).
@@ -69,7 +69,7 @@ def send_message(request):
                 subject_email,
                 message_email,
                 settings.DEFAULT_FROM_EMAIL,
-                ['inspirezestdemo@gmail.com'],  # Replace with your client's email address
+                ['ankuxshh72@gmail.com'],  # Replace with your client's email address
                 fail_silently=False,
             )
             messages.success(request, "Your message has been sent successfully.")
@@ -115,10 +115,82 @@ def fiveyears(request):
     """Render the course details page."""
     return render(request, "fiveyears.html")
 
+def send_llb(request): 
+    """Handles the POST request for 5-year LL.B. course registration form."""
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        subject_email = "New 5-Year LL.B. Course Registration"
+        message_email = f"""
+        A new registration has been submitted for the 5-year LL.B. course.
+
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+
+        Message:
+        {message if message else "No message provided."}
+        """
+
+        try:
+            send_mail(
+                subject_email,
+                message_email,
+                settings.DEFAULT_FROM_EMAIL,
+                ['ankuxshh72@gmail.com'],  # Replace with actual recipient
+                fail_silently=False,
+            )
+            messages.success(request, "Your application has been submitted successfully.")
+        except Exception as e:
+            messages.error(request, f"Submission failed. Error: {e}")
+
+        return redirect('fiveyears')
+
+    # If not a POST request, redirect to course details
+    return redirect('fiveyears')
+
 
 def threeyears(request):
     """Render the course details page."""
     return render(request, "threeyears.html")
+
+def register_llb(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        subject_email = "New LL.B. Course Registration"
+        message_email = f"""
+        A new registration has been submitted for the 3-year LL.B. course.
+
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+
+        Message:
+        {message if message else "No message provided."}
+        """
+
+        try:
+            send_mail(
+                subject_email,
+                message_email,
+                settings.DEFAULT_FROM_EMAIL,
+                ['ankuxshh72@gmail.com'],  # Replace with recipient
+                fail_silently=False,
+            )
+            messages.success(request, "Your application has been submitted successfully.")
+        except Exception as e:
+            messages.error(request, f"Submission failed. Error: {e}")
+
+        return redirect('threeyears')  # Replace with your desired redirect page
+
+    return redirect('threeyears')  # Redirect to the course details page if not POST
 
 
 def academics(request):
@@ -181,4 +253,12 @@ def rules(request):
 def admindesk(request):
     """Render the legal aid clinic page."""
     return render(request, "admindesk.html")
+
+def facultydesk(request):
+    """Render the legal aid clinic page."""
+    return render(request, "facultydesk.html")
+
+def committee(request):
+    """Render the legal aid clinic page."""
+    return render(request, "committee.html")
 

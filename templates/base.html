@@ -76,16 +76,19 @@
             <!-- Right-side Contact & Social -->
             <div class="col-md-2 text-md-right text-center">
               <div>
-                <strong class="text-dark"><i class="ri-phone-fill fs-5"></i> +91 79079 95275</strong><br />
+                <strong class="text-dark"><img src="static/images/call.png" alt="Gmail Icon" style="height: 20px; vertical-align: middle; margin-right: 5px;" /> +91 79079 95275</strong><br />
                 <br />
-                <a href="mailto:ilahialaw@gmail.com" style="font-weight: 600; color: #1e1e4b !important;"><i class="ri-mail-line fs-5"></i> ilahialaw@gmail.com</a>
+                <a href="mailto:ilahialaw@gmail.com" style="font-weight: 600; color: #1e1e4b !important;">
+                  <img src="static/images/gmail.png" alt="Gmail Icon" style="height: 25px; vertical-align: middle; margin-right: 5px;" />
+                  ilahialaw@gmail.com
+                </a>
               </div>
             </div>
             <br />
             <div class="col-md-2 text-md-right text-center">
               <div class="mt-2">
                 {% comment %} <a href="#" class="mx-1"><i class="fab fa-facebook text-dark fs-3"></i></a> {% endcomment %}
-                <a href="https://www.instagram.com/ilahia.law/?igsh=MWJpNjd6N203YXBsag%3D%3D#" class="mx-1"><i class="fab fa-instagram text-dark fs-3"></i></a>
+                <a href="https://www.instagram.com/ilahia.law/?igsh=MWJpNjd6N203YXBsag%3D%3D#" class="mx-1"><img src="static/images/instagram.png" alt="Gmail Icon" style="height: 35px; vertical-align: middle; margin-right: 5px;" /></a>
                 {% comment %} <small class="text-muted ml-2" style="font-weight: 600; color: #1e1e4b !important;">April 24, 2025</small> {% endcomment %}
               </div>
             </div>
@@ -94,7 +97,7 @@
       </div>
 
       <!-- Main Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-top border-bottom" style="height: 60px;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 60px;">
         <div class="container">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
 
@@ -107,7 +110,7 @@
                 <a href="about" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="about">College Profile</a>
+                    <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
                     <ul class="dropdown-menu">
                       <li>
                         <a class="dropdown-item" href="">About Us</a>
@@ -127,14 +130,16 @@
                   <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
                   <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
                   <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
+                  <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
                 </div>
               </li>
-              <li class="nav-item @@courses">
+              {% comment %} <li class="nav-item @@courses">
                 <a class="nav-link" href="courses">COURSES</a>
-              </li>
+              </li> {% endcomment %}
               <li class="nav-item dropdown view">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMISSIONS</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="courses">Courses</a>
                   <a class="dropdown-item" href="admission_process">Admission Process</a>
                   {% comment %} <a class="dropdown-item" href="fee_structure">Fee Structure</a> {% endcomment %}
                 </div>
@@ -150,6 +155,7 @@
                   <a class="dropdown-item" href="achievements">Our Achievements</a>
                   <a class="dropdown-item" href="statutory">Statutory Units</a>
                   <a class="dropdown-item" href="rules">Rules & Regulations</a>
+                  <a class="dropdown-item" href="committee">Committee</a>
                 </div>
               </li>
               <li class="nav-item @@contact">
@@ -203,7 +209,7 @@
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">ABOUT US</a>
                 <div class="dropdown-menu">
                   <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="about">College Profile</a>
+                    <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
                     <ul class="dropdown-menu">
                       <li>
                         <a class="dropdown-item" href="">About Us</a>
@@ -222,6 +228,8 @@
                   <a class="dropdown-item" href="managements">Management</a>
                   <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
                   <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
+                  <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
+                  <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -244,6 +252,7 @@
                   <a class="dropdown-item" href="achievements">Achievements</a>
                   <a class="dropdown-item" href="statutory">Statutory Units</a>
                   <a class="dropdown-item" href="rules">Rules and Regulations</a>
+                  <a class="dropdown-item" href="committee">Committee</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -288,7 +297,7 @@
               <h4 class="text-white mb-5">ABOUT</h4>
               <ul class="list-unstyled">
                 <li class="mb-3">
-                  <a class="text-color" href="about">About Us</a>
+                  <a class="text-color" href="aboutus">About Us</a>
                 </li>
                 <li class="mb-3">
                   <a class="text-color" href="managements">Management</a>
