@@ -69,7 +69,7 @@ def send_message(request):
                 subject_email,
                 message_email,
                 settings.DEFAULT_FROM_EMAIL,
-                ['ankuxshh72@gmail.com'],  # Replace with your client's email address
+                ['ilahialaw@gmail.com'],  # Replace with your client's email address
                 fail_silently=False,
             )
             messages.success(request, "Your message has been sent successfully.")
@@ -140,7 +140,7 @@ def send_llb(request):
                 subject_email,
                 message_email,
                 settings.DEFAULT_FROM_EMAIL,
-                ['ankuxshh72@gmail.com'],  # Replace with actual recipient
+                ['ilahialaw@gmail.com'],  # Replace with actual recipient
                 fail_silently=False,
             )
             messages.success(request, "Your application has been submitted successfully.")
@@ -181,7 +181,7 @@ def register_llb(request):
                 subject_email,
                 message_email,
                 settings.DEFAULT_FROM_EMAIL,
-                ['ankuxshh72@gmail.com'],  # Replace with recipient
+                ['ilahialaw@gmail.com'],  # Replace with recipient
                 fail_silently=False,
             )
             messages.success(request, "Your application has been submitted successfully.")
