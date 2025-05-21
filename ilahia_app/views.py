@@ -148,6 +148,9 @@ def send_llb(request):
 
     return redirect('fiveyears')
 
+def threeyears(request):
+    """Render the course details page."""
+    return render(request, "threeyears.html")
 
 def register_llb(request):
     if request.method == 'POST':
