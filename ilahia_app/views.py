@@ -1,4 +1,4 @@
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -39,46 +39,42 @@ def contactpage(request):
     """Render the contact page."""
     return render(request, "contactpage.html")
 
-
 def send_message(request):
-    """Render the contact page and handle form submission."""
+    """Handle form submission and send email."""
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
 
-        # Compose the email
-        subject_email = f"New Inquiry : {subject}"
+        # Email subject and body
+        subject_email = f"New Inquiry: {subject}"
         message_email = f"""
-        You have received a new enquiry from {name} 
+        You have received a new enquiry from {name}
 
-        Email :
-        ({email}).
+        Email: {email}
+        Subject: {subject}
 
-        Subject : 
-        {subject}
-        
-        Message :
+        Message:
         {message}
         """
 
         try:
-            # Send email
-            send_mail(
-                subject_email,
-                message_email,
-                settings.DEFAULT_FROM_EMAIL,
-                ['ilahialaw@gmail.com'],  # Replace with your client's email address
-                fail_silently=False,
+            # Create the email with reply-to header
+            email_message = EmailMessage(
+                subject=subject_email,
+                body=message_email,
+                from_email=settings.DEFAULT_FROM_EMAIL,  # Must be your authenticated email
+                to=['ilahialaw@gmail.com'],  # Recipient
+                headers={'Reply-To': email}  # User's email for reply
             )
+            email_message.send(fail_silently=False)
             messages.success(request, "Your message has been sent successfully.")
         except Exception as e:
             messages.error(request, f"Failed to send message. Error: {e}")
-        
-        # Redirect to the contact page (will reload the form with messages)
+
         return redirect('contactpage')
-    
+
     return render(request, "contactpage.html")
 
 
@@ -115,82 +111,82 @@ def fiveyears(request):
     """Render the course details page."""
     return render(request, "fiveyears.html")
 
-def send_llb(request): 
-    """Handles the POST request for 5-year LL.B. course registration form."""
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
+# def send_llb(request): 
+#     """Handles the POST request for 5-year LL.B. course registration form."""
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         phone = request.POST.get('phone')
+#         message = request.POST.get('message')
 
-        subject_email = "New 5-Year LL.B. Course Registration"
-        message_email = f"""
-        A new registration has been submitted for the 5-year LL.B. course.
+#         subject_email = "New 5-Year LL.B. Course Registration"
+#         message_email = f"""
+#         A new registration has been submitted for the 5-year LL.B. course.
 
-        Name: {name}
-        Email: {email}
-        Phone: {phone}
+#         Name: {name}
+#         Email: {email}
+#         Phone: {phone}
 
-        Message:
-        {message if message else "No message provided."}
-        """
+#         Message:
+#         {message if message else "No message provided."}
+#         """
 
-        try:
-            send_mail(
-                subject_email,
-                message_email,
-                settings.DEFAULT_FROM_EMAIL,
-                ['ilahialaw@gmail.com'],  # Replace with actual recipient
-                fail_silently=False,
-            )
-            messages.success(request, "Your application has been submitted successfully.")
-        except Exception as e:
-            messages.error(request, f"Submission failed. Error: {e}")
+#         try:
+#             send_mail(
+#                 subject_email,
+#                 message_email,
+#                 settings.DEFAULT_FROM_EMAIL,
+#                 ['ilahialaw@gmail.com'],  # Replace with actual recipient
+#                 fail_silently=False,
+#             )
+#             messages.success(request, "Your application has been submitted successfully.")
+#         except Exception as e:
+#             messages.error(request, f"Submission failed. Error: {e}")
 
-        return redirect('fiveyears')
+#         return redirect('fiveyears')
 
-    # If not a POST request, redirect to course details
-    return redirect('fiveyears')
+#     # If not a POST request, redirect to course details
+#     return redirect('fiveyears')
 
 
 def threeyears(request):
     """Render the course details page."""
     return render(request, "threeyears.html")
 
-def register_llb(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
+# def register_llb(request):
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         phone = request.POST.get('phone')
+#         message = request.POST.get('message')
 
-        subject_email = "New LL.B. Course Registration"
-        message_email = f"""
-        A new registration has been submitted for the 3-year LL.B. course.
+#         subject_email = "New LL.B. Course Registration"
+#         message_email = f"""
+#         A new registration has been submitted for the 3-year LL.B. course.
 
-        Name: {name}
-        Email: {email}
-        Phone: {phone}
+#         Name: {name}
+#         Email: {email}
+#         Phone: {phone}
 
-        Message:
-        {message if message else "No message provided."}
-        """
+#         Message:
+#         {message if message else "No message provided."}
+#         """
 
-        try:
-            send_mail(
-                subject_email,
-                message_email,
-                settings.DEFAULT_FROM_EMAIL,
-                ['ilahialaw@gmail.com'],  # Replace with recipient
-                fail_silently=False,
-            )
-            messages.success(request, "Your application has been submitted successfully.")
-        except Exception as e:
-            messages.error(request, f"Submission failed. Error: {e}")
+#         try:
+#             send_mail(
+#                 subject_email,
+#                 message_email,
+#                 settings.DEFAULT_FROM_EMAIL,
+#                 ['ilahialaw@gmail.com'],  # Replace with recipient
+#                 fail_silently=False,
+#             )
+#             messages.success(request, "Your application has been submitted successfully.")
+#         except Exception as e:
+#             messages.error(request, f"Submission failed. Error: {e}")
 
-        return redirect('threeyears')  # Replace with your desired redirect page
+#         return redirect('threeyears')  # Replace with your desired redirect page
 
-    return redirect('threeyears')  # Redirect to the course details page if not POST
+#     return redirect('threeyears')  # Redirect to the course details page if not POST
 
 
 def academics(request):
