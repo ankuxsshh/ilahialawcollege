@@ -1,24 +1,38 @@
-{% extends 'base.html' %} Home | Ilahia Law College {% block content %}
-<!-- hero section -->
-<section class="hero-section overlay" style="position: relative; overflow: hidden;">
-  <!-- Static responsive background image -->
-  <div class="bg-image">
-    <img src="static/images/banner1.JPG" alt="Background Image" class="hero-bg-img">
-  </div>
-  <!-- Content overlay -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8" style="top: 100px;">
-        <h1 class="text-white mb-4">Ilahia Law College Excellence</h1>
-        <br>
-        <br>
-        <a href="contact" class="btn btn-primary">Apply now</a>
+{% extends 'base.html' %}Home | Ilahia Law College{% block content %}
+  <section class="hero-section overlay" style="position: relative; overflow: hidden;">
+    <!-- Static responsive background image -->
+    <div class="bg-image">
+      <img src="static/images/banner1.JPG" alt="Background Image" class="hero-bg-img" />
+    </div>
+    <!-- Content overlay -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" style="top: 100px;">
+          <h1 class="text-white mb-4">Ilahia Law College Excellence</h1>
+          <br /><br />
+          <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopup()">Apply now</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Registration Popup -->
+  <div id="registerPopup" class="popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999;">
+    <div class="popup-form" style="background: #fff; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; margin: 100px auto; position: relative;">
+      <button class="close-btn" onclick="closePopup()" style="position: absolute; top: 10px; right: 15px; background: transparent; border: none; font-size: 24px;">×</button>
+      <h4 class="mb-3">Register for 3 year LL.B. Course</h4>
+      <form method="POST" action="{% url 'register_llb' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required />
+          <input type="email" name="email" class="form-control mb-3" placeholder="Email" required />
+          <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number" required />
+          <textarea name="message" class="form-control mb-3" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit" class="btn btn-success w-100">Submit Application</button>
+        </div>
+      </form>
+    </div>
   </div>
-</section>
-
-
 
   <!-- about us -->
   <section class="section">
@@ -30,8 +44,7 @@
             <br />Ilahia Law College – Shaping Tomorrow’s Legal Leaders
           </h2>
           <p class="text-justify" data-aos="fade-left">Ilahia Law College is an institution of eminence providing top-notch legal education that prepares students for the complexities of the modern legal world. By meticulously pursuing academic excellence, imparting practical and impactful training, adhering to ethical practices, and maintaining social responsibility of the highest degree, we aim to nurture the next generation of legal professionals who shall contribute to justice, fairness, and national progress.</p>
-          <p class="text-justify" data-aos="fade-left">Founded in 2024, Ilahia Law College is a young institution, driven by a bold vision to offer transformative education: our expert faculty, state-of-the-art facilities, and commitment to transcend the realm of the ordinary ensure that our students are well-equipped to excel in the ever-evolving field of law.
-            The law college is managed by Ilahia Trust.</p>
+          <p class="text-justify" data-aos="fade-left">Founded in 2024, Ilahia Law College is a young institution, driven by a bold vision to offer transformative education: our expert faculty, state-of-the-art facilities, and commitment to transcend the realm of the ordinary ensure that our students are well-equipped to excel in the ever-evolving field of law. The law college is managed by Ilahia Trust.</p>
           <a href="about" class="btn btn-primary-outline" class="" data-aos="fade-up">Know more</a>
         </div>
         <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0" class="" data-aos="zoom-in">
@@ -43,73 +56,65 @@
   <!-- /about us -->
 
   <!-- banner-feature -->
-<section class="bg-white py-5">
-  <div class="container">
-    <h2 class="section-title mb-5" data-aos="fade-up">Why Choose Law College ?</h2>
-    <div class="row g-4 justify-content-center">
+  <section class="bg-white py-5">
+    <div class="container">
+      <h2 class="section-title mb-5" data-aos="fade-up">Why Choose Law College ?</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- 1. Academic Excellence -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/open-book.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Academic Excellence</h3>
+          <p class="text-justify">Our curriculum combines theory and practice, challenging students to excel through rigorous coursework, lectures, and continuous evaluations.</p>
+        </div>
 
-      <!-- 1. Academic Excellence -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/open-book.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Academic Excellence</h3>
-        <p class="text-justify">Our curriculum combines theory and practice, challenging students to excel through rigorous coursework, lectures, and continuous evaluations.</p>
+        <!-- 2. Practical Training -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/graduation.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Practical Training</h3>
+          <p class="text-justify">Students gain practical skills through seminars, conferences, moot courts, legal clinics, and internships, experiencing real-world legal scenarios.</p>
+        </div>
+
+        <!-- 3. Interdisciplinary Initiatives -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/open-enrollment.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Interdisciplinary Initiatives</h3>
+          <p class="text-justify">Collaborations with fields like social work and public policy enable students to address broader societal issues.</p>
+        </div>
+
+        <!-- 4. Ethics Courses and Workshops -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/trophy.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Legal Ethics & Integrity</h3>
+          <p class="text-justify">Courses and workshops ensure students understand the ethical and moral dimensions of legal practice and responsibility.</p>
+        </div>
+
+        <!-- 5. Innovative Research -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/open-book.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Innovative Research</h3>
+          <p class="text-justify">Faculty and students engage in impactful research addressing legal challenges and contributing to policy and justice.</p>
+        </div>
+
+        <!-- 6. Inclusive Environment -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/graduation.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Inclusive Environment</h3>
+          <p class="text-justify">We cultivate diversity and equal opportunity, preparing students to advocate for justice in a pluralistic society.</p>
+        </div>
+
+        <!-- 7. Holistic Development -->
+        <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
+          <img src="static/images/open-enrollment.gif" class="feature-icon img-fluid mb-3" />
+          <h3 class="mb-3">Holistic Development</h3>
+          <p class="text-justify">We nurture not just legal expertise but also ethics, interpersonal skills, and well-being for a balanced professional life.</p>
+        </div>
       </div>
-
-      <!-- 2. Practical Training -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/graduation.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Practical Training</h3>
-        <p class="text-justify">Students gain practical skills through seminars, conferences, moot courts, legal clinics, and internships, experiencing real-world legal scenarios.</p>
-      </div>
-
-      <!-- 3. Interdisciplinary Initiatives -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/open-enrollment.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Interdisciplinary Initiatives</h3>
-        <p class="text-justify">Collaborations with fields like social work and public policy enable students to address broader societal issues.</p>
-      </div>
-
-      <!-- 4. Ethics Courses and Workshops -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/trophy.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Legal Ethics & Integrity</h3>
-        <p class="text-justify">Courses and workshops ensure students understand the ethical and moral dimensions of legal practice and responsibility.</p>
-      </div>
-
-      <!-- 5. Innovative Research -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/open-book.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Innovative Research</h3>
-        <p class="text-justify">Faculty and students engage in impactful research addressing legal challenges and contributing to policy and justice.</p>
-      </div>
-
-      <!-- 6. Inclusive Environment -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/graduation.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Inclusive Environment</h3>
-        <p class="text-justify">We cultivate diversity and equal opportunity, preparing students to advocate for justice in a pluralistic society.</p>
-      </div>
-
-      <!-- 7. Holistic Development -->
-      <div class="col-sm-6 col-lg-3 text-center text-sm-left" data-aos="fade-left">
-        <img src="static/images/open-enrollment.gif" class="feature-icon img-fluid mb-3" />
-        <h3 class="mb-3">Holistic Development</h3>
-        <p class="text-justify">We nurture not just legal expertise but also ethics, interpersonal skills, and well-being for a balanced professional life.</p>
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- /banner-feature -->
-
-
-        <br>
-        <br>
-        <br>
-
+  </section>
+  <!-- /banner-feature -->
 
   <!-- success story -->
-  <section class="section bg-cover"  data-aos="flip-down" data-background="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  <section class="section bg-cover" data-aos="flip-down" data-background="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-4 position-relative success-video" data-aos="flip-up">
@@ -141,84 +146,83 @@
   </section>
   <!-- /cta -->
 
-
-<!-- Academic Programs Section -->
-<section class="academics-section py-5">
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-12 text-center">
-        <h2 class="section-title font-weight-bold" data-aos="flip-up">Explore Our Academic Programs</h2>
+  <!-- Academic Programs Section -->
+  <section class="academics-section py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h2 class="section-title font-weight-bold" data-aos="flip-up">Explore Our Academic Programs</h2>
+        </div>
       </div>
+
+      <!-- Academic Program Cards -->
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/2day.png" class="card-img-top" alt="2-day Seminar" data-aos="flip-up" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">Two-day national seminar inaugurated by Mr. B Kemel Pasha (Retired Judge of High Court of Kerala)</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/llbbatch.png" class="card-img-top" alt="LLB Batch" data-aos="flip-down" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">First LLB Batch Motivation class by Mr. Mahesh G (District Judge)</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/seminar.png" class="card-img-top" alt="Seminar" data-aos="flip-up" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">Seminar by Dr. N.L. Sajikumar, Associate Professor, Govt Law College, Trivandrum</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/republicday.png" class="card-img-top" alt="Republic Day" data-aos="flip-down" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">Republic Day festivities with Taluk Legal Services Committee</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/motivationalclass.png" class="card-img-top" alt="Motivational Class" data-aos="flip-up" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">Motivation class by Mr. A.M. Jamal Azhari (School of Quran and Science, Aluva)</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow border-0">
+            <img src="static/images/events/cyber.png" class="card-img-top" alt="Cyber Security" data-aos="flip-down" />
+            <div class="card-body">
+              <h5 class="card-title text-center font-weight-bold">Cyber Security awareness programme by DLSA, Kerala Police Cyber Crime Unit, and Sevakh Global</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Academic Program Cards -->
     </div>
+  </section>
+  <!-- /Academic Programs Section -->
 
-    <!-- Academic Program Cards -->
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/2day.png" class="card-img-top" alt="2-day Seminar" data-aos="flip-up">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">Two-day national seminar inaugurated by Mr. B Kemel Pasha (Retired Judge of High Court of Kerala)</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/llbbatch.png" class="card-img-top" alt="LLB Batch" data-aos="flip-down">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">First LLB Batch Motivation class by Mr. Mahesh G (District Judge)</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/seminar.png" class="card-img-top" alt="Seminar" data-aos="flip-up">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">Seminar by Dr. N.L. Sajikumar, Associate Professor, Govt Law College, Trivandrum</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/republicday.png" class="card-img-top" alt="Republic Day" data-aos="flip-down">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">Republic Day festivities with Taluk Legal Services Committee</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/motivationalclass.png" class="card-img-top" alt="Motivational Class" data-aos="flip-up">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">Motivation class by Mr. A.M. Jamal Azhari (School of Quran and Science, Aluva)</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow border-0">
-          <img src="static/images/events/cyber.png" class="card-img-top" alt="Cyber Security" data-aos="flip-down">
-          <div class="card-body">
-            <h5 class="card-title text-center font-weight-bold">Cyber Security awareness programme by DLSA, Kerala Police Cyber Crime Unit, and Sevakh Global</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Academic Program Cards -->
-  </div>
-</section>
-<!-- /Academic Programs Section -->
-
-      <!-- Academics Section -->
+  <!-- Academics Section -->
   <section class="academics-section py-5">
     <div class="container">
       <div class="row mb-4">
@@ -231,7 +235,7 @@
       <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow border-0">
-            <img src="https://images.pexels.com/photos/30483129/pexels-photo-30483129/free-photo-of-statue-of-lady-justice-with-scales.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="LLB Program" data-aos="flip-up">
+            <img src="https://images.pexels.com/photos/30483129/pexels-photo-30483129/free-photo-of-statue-of-lady-justice-with-scales.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="LLB Program" data-aos="flip-up" />
             <div class="card-body">
               <h5 class="card-title font-weight-bold section-title" data-aos="flip-up">BA.LLB. – 5-Year Integrated Course in Law</h5>
               <p class="card-text text-muted" data-aos="flip-up">A comprehensive undergraduate program that lays the foundation for a career in law.</p>
@@ -242,7 +246,7 @@
 
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow border-0">
-            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="BA LLB Program" data-aos="flip-down">
+            <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="BA LLB Program" data-aos="flip-down" />
             <div class="card-body">
               <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">3-Year LL.B. – Unitary Bachelor’s Degree in Law</h5>
               <p class="card-text text-muted" data-aos="flip-down">An integrated program combining arts and law for a multidisciplinary approach.</p>
@@ -250,155 +254,79 @@
             </div>
           </div>
         </div>
-
-{% comment %} <div class="col-md-4 mb-4">
-  <div class="card h-100 shadow border-0">
-    <img src="https://images.pexels.com/photos/5669616/pexels-photo-5669616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Merit LL.B. Program" data-aos="flip-down">
-    <div class="card-body">
-      <h5 class="card-title font-weight-bold section-title" data-aos="flip-down">5-Year LL.B. – Merit Seat Admission</h5>
-      <p class="card-text text-muted" data-aos="flip-down">Secure your place in the 5-year LL.B. course through the Kerala Government merit quota process.</p>
-      <a href="merit" class="btn btn-primary btn-sm" data-aos="flip-down">Apply now</a>
-    </div>
-  </div>
-</div> {% endcomment %}
-
-        
       </div>
       <!-- /Academic Programs -->
     </div>
   </section>
   <!-- /Academics Section -->
 
-
-  {% comment %} <!-- Gallery -->
-  <section class="py-5">
+  <!-- Contact Section -->
+  <section class="section bg-gray">
     <div class="container">
-      <h2 class="section-title text-center mb-5">Legal Insights Gallery</h2>
-
-      <!-- Gallery Grid: 3 Images per Row -->
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery1.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery2.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Wintry Mountain Landscape" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery3.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery4.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery5.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery6.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Yosemite National Park" />
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="static/images/galleryyy.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery8.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery9.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery10.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery11.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery12.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Yosemite National Park" />
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="static/images/gallery15.jpeg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Mountains in the Clouds" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/2day.jpg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Boat on Calm Water" />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="static/images/2dayss.jpg" class="gallery-image w-100 shadow-1-strong mb-4" alt="Waves at Sea" />
+        <div class="col-lg-12">
+          <h2 class="section-title" data-aos="fade-in">Get in Touch with Us</h2>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-in">
+          <!-- Display success or error messages -->
+          {% if messages %}
+            <div>
+              {% for message in messages %}
+                <div class="alert {% if message.tags == 'success' %}
+                    
+                    alert-success
 
-    <!-- Image Modal Overlay -->
-    <div id="imageModal" class="modal-overlay">
-      <img class="modal-image" id="enlargedImage" />
-    </div>
-  </section> {% endcomment %}
+                  {% else %}
+                    
+                    alert-danger
 
-    <!-- contact -->
-    <section class="section bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="section-title" data-aos="fade-in">Get in Touch with Us</h2>
-          </div>
+                  {% endif %}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <form action="{% url 'send_message' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Full Name" required data-aos="fade-left" />
+            <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email Address" required data-aos="fade-left" />
+            <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Inquiry Subject" required data-aos="fade-left" />
+            <textarea name="message" id="message" class="form-control mb-3" placeholder="Write your message here..." rows="5" required data-aos="fade-left"></textarea>
+            <button type="submit" class="btn btn-primary" data-aos="fade-left">SEND MESSAGE</button>
+          </form>
         </div>
-        <div class="row">
-          
-<!-- Contact Form -->
-<div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-in">
 
-  <!-- Display success or error messages -->
-  {% if messages %}
-      <div>
-          {% for message in messages %}
-              <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
-                  {{ message }}
-              </div>
-          {% endfor %}
-      </div>
-  {% endif %}
-  
-  <form action="{% url 'send_message' %}" method="POST">
-      {% csrf_token %}
-      <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Full Name" required data-aos="fade-left"/>
-      <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email Address" required data-aos="fade-left"/>
-      <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Inquiry Subject" required data-aos="fade-left"/>
-      <textarea name="message" id="message" class="form-control mb-3" placeholder="Write your message here..." rows="5" required data-aos="fade-left"></textarea>
-      <button type="submit" class="btn btn-primary" data-aos="fade-left">SEND MESSAGE</button>
-  </form>
-</div>
-<!-- Contact Information -->
-  
-          <!-- Contact Info -->
-          <div class="col-lg-5">
-            <p class="mb-5" data-aos="fade-left text-justify"/>For inquiries related to **admissions, legal seminars, moot court competitions, or faculty appointments**, feel free to reach out via phone or email. Our dedicated team is here to assist you.</p>
-            <h5 class="text-dark" data-aos="fade-left"/>Contact Details</h5>
-            <br>
-            <ul class="list-unstyled">
-              <li>
-                <i class="fas fa-user-tie mr-2 text-dark"></i><strong>Chairman:</strong> +91 70345 67890
-              </li>
-              <br />
-              <li>
-                <i class="fas fa-chalkboard-teacher mr-2 text-dark"></i><strong>Principal:</strong> +91 79079 95275
-              </li>
-              <br />
-              <li>
-                <i class="fas fa-laptop-code mr-2 text-dark"></i><strong>System Administrator:</strong> +91 99478 89499
-              </li>
-              <br />
-              <li>
-                <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Office Administrator:</strong> +91 94466 06549
-              </li>
-              <br>
-              <li>
-                <i class="fas fa-briefcase mr-2 text-dark"></i><strong> Faculty Coordinator :</strong> +91 89219 08430
-              </li>
-            </ul>
-  <br><br>
-            <h5 class="text-dark" data-aos="fade-left">Campus Address</h5>
-            <br>
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <p class="mb-5 text-justify" data-aos="fade-left">
+            For inquiries related to <strong>admissions, legal seminars, moot court competitions, or faculty appointments</strong>, feel free to reach out via phone or email. Our dedicated team is here to assist you.
+          </p>
+
+          <h5 class="text-dark" data-aos="fade-left">Contact Details</h5>
+          <br />
+          <ul class="list-unstyled">
+            <li>
+              <i class="fas fa-user-tie mr-2 text-dark"></i><strong>Chairman :</strong> +91 70345 67890
+            </li><br />
+            <li>
+              <i class="fas fa-chalkboard-teacher mr-2 text-dark"></i><strong>Principal :</strong> +91 79079 95275
+            </li><br />
+            <li>
+              <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Administrative Officer :</strong> +91 94466 06549
+            </li><br />
+            <li>
+              <i class="fas fa-laptop-code mr-2 text-dark"></i><strong>System Administrator :</strong> +91 99478 89499
+            </li><br />
+            <li>
+              <i class="fas fa-briefcase mr-2 text-dark"></i><strong>Faculty Coordinator :</strong> +91 89219 08430
+            </li>
+          </ul>
+
+          <br /><br />
+          <h5 class="text-dark" data-aos="fade-left">Campus Address</h5>
+          <br />
           <div class="d-flex">
             <i class="fas fa-map-marker-alt text-dark mt-1 mr-3"></i>
             <p class="mb-0">
@@ -407,24 +335,36 @@
               India - 686673
             </p>
           </div>
-          </div>
         </div>
       </div>
-    </section>
-    <!-- /contact -->
-  
-    <br><br>
+    </div>
+  </section>
+  <!-- /Contact Section -->
 
-    <!-- Google Map Section -->
-    <section class="section pt-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="map-container" data-aos="fade-left">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.8824516477644!2d76.56767599999999!3d10.026558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzM1LjYiTiA3NsKwMzQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1738141076412!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+  <br /><br />
+
+  <!-- Google Map Section -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="map-container" data-aos="fade-left">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3928.8824516477644!2d76.56767599999999!3d10.026558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzM1LjYiTiA3NsKwMzQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1738141076412!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- /Google Map Section -->
+
+  <!-- JavaScript -->
+  <script>
+    function openPopup() {
+      document.getElementById('registerPopup').style.display = 'block'
+    }
+    
+    function closePopup() {
+      document.getElementById('registerPopup').style.display = 'none'
+    }
+  </script>
 {% endblock %}

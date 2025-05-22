@@ -33,7 +33,7 @@
       <div class="row justify-content-center text-center">
         <!-- Card 1: Head of Department -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card border-0 rounded-lg h-100">
+          <div class="card border-0 rounded-lg">
             <img src="static/images/shilpa.jpeg" class="card-img-top rounded-top" alt="Head of Department" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mrs. Shilpa U.S</h5>
@@ -44,7 +44,7 @@
 
         <!-- Card 2: Assistant Professor -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 rounded-lg h-100">
+          <div class="card border-0 rounded-lg">
             <img src="static/images/rameez.jpeg" class="card-img-top rounded-top" alt="Assistant Professor" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mr. Rameez Siddique</h5>
@@ -55,7 +55,7 @@
 
         <!-- Card 3: Lecturer -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card border-0 rounded-lg h-100">
+          <div class="card border-0 rounded-lg">
             <img src="static/images/amjada.jpeg" class="card-img-top rounded-top" alt="Lecturer" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mrs. Amjada M Sayed</h5>
@@ -66,7 +66,7 @@
 
         <!-- Card 4: Lab Instructor -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 rounded-lg h-100">
+          <div class="card border-0 rounded-lg">
             <img src="static/images/muhsina.png" class="card-img-top rounded-top" alt="Lab Instructor" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mrs. Muhsina K.A</h5>
@@ -75,10 +75,10 @@
           </div>
         </div>
 
-        <!-- Card 4: Lab Instructor -->
+        <!-- Card 5: Assistant Professor -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 rounded-lg h-100">
-            <img src="static/images/rennu.jpeg" class="card-img-top rounded-top" alt="Lab Instructor" />
+          <div class="card border-0 rounded-lg">
+            <img src="static/images/rennu.jpeg" class="card-img-top rounded-top" alt="Assistant Professor" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mrs. Renu Jacob</h5>
               <p class="text-dark mb-0">Assistant Professor in English</p>
@@ -86,10 +86,10 @@
           </div>
         </div>
 
-        <!-- Card 4: Lab Instructor -->
+        <!-- Card 6: Assistant Professor -->
         <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card border-0 rounded-lg h-100">
-            <img src="static/images/krishnan.jpeg" class="card-img-top rounded-top" alt="Lab Instructor" />
+          <div class="card border-0 rounded-lg">
+            <img src="static/images/krishnan.jpeg" class="card-img-top rounded-top" alt="Assistant Professor" />
             <div class="card-body">
               <h5 class="card-title mb-1">Mr. Krishnan S K</h5>
               <p class="text-dark mb-0">Assistant Professor in Economics</p>
@@ -99,13 +99,26 @@
       </div>
     </div>
   </section>
-  <!-- CSS override to replace background image -->
+
+  <!-- CSS override to make images fully visible with consistent height -->
   <style>
-    section.page-title-section.overlay[data-background='static/images/backgrounds/page-title.jpg'] {
-      background-image: url('static/images/title.jpeg') !important;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    /* Remove fixed height from cards to allow natural height */
+    .card {
+      height: auto !important;
+    }
+
+    /* Set fixed height for images to ensure full display, adjust as needed */
+    .card-img-top {
+      height: 320px; /* You can adjust this height */
+      object-fit: contain; /* Preserve full image without cropping */
+      width: 100%;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    /* Optional: Make card body padding consistent */
+    .card-body {
+      padding: 1rem;
     }
   </style>
 {% endblock %}
