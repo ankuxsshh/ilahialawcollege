@@ -258,3 +258,7 @@ def committee(request):
     """Render the legal aid clinic page."""
     return render(request, "committee.html")
 
+def iqac(request):
+    """Render the iqac page."""
+    return render(request, "iqac.html")
+

@@ -1,451 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>
-      {% block title %}
-        Home | Ilahia Law College
-      {% endblock %}
-    </title>
 
-    <!-- Favicon link -->
-    <link rel="icon" href="static/images/ilahialogo.png" type="image/png" style="width: auto; height: auto;" />
-
-    <!-- mobile responsive meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="static/plugins/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <!-- slick slider -->
-    <link rel="stylesheet" href="static/plugins/slick/slick.css" />
-    <!-- themefy-icon -->
-    <link rel="stylesheet" href="static/plugins/themify-icons/themify-icons.css" />
-    <!-- animation css -->
-    <link rel="stylesheet" href="static/plugins/animate/animate.css" />
-    <!-- aos -->
-    <link rel="stylesheet" href="static/plugins/aos/aos.css" />
-    <!-- venobox popup -->
-    <link rel="stylesheet" href="static/plugins/venobox/venobox.css" />
-
-    <!-- Main Stylesheet -->
-    <link href="static/css/style.css" rel="stylesheet" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div class="loader-container">
-      <!-- Centered Logo Image -->
-      <img src="static/images/logo1.png" alt="Ilahia Law College Logo" class="loader-logo" />
-
-      <!-- Animated Loading Text -->
-      <div class="loader"></div>
-    </div>
-
-    <!-- header -->
-    <header class="d-none d-lg-block fixed-top">
-      <!-- Top Bar -->
-      <div class="bg-white py-2 border-bottom">
-        <div class="container-fluid">
-          <div class="row align-items-center text-center text-md-left">
-            <!-- Logo and College Name -->
-            <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
-              <img src="static/images/ilahialogo.png" alt="logo" class="mr-2" style="height: 100px; border-radius: 50%; box-shadow: 0 4px 12px #b2b2b3;" />
-
-              <div class="text-left">
-                <h5 class="mb-0 font-weight-bold">ILAHIA LAW COLLEGE</h5>
-                <small>Muvattupuzha, Kerala - 686673</small>
-              </div>
-            </div>
-
-            <!-- Center Logos -->
-            <div class="col-md-4 d-flex justify-content-center align-items-center flex-wrap" style="margin-left: -50px;">
-              {% comment %} <img src="https://glcekm.com/wp-content/uploads/2021/12/image.png" alt="logo" class="mx-1" style="height: 80px; margin-right: 110px!important;" />
-              <img src="https://glcekm.com/wp-content/uploads/2020/11/kerala.png" alt="logo" class="mx-1" style="height: 80px;" /> {% endcomment %}
-            </div>
-
-            <!-- Right-side Contact & Social -->
-            <div class="col-md-2 text-md-right text-center">
-              <div>
-                <strong class="text-dark"><img src="static/images/call.png" alt="Gmail Icon" style="height: 20px; vertical-align: middle; margin-right: 5px;" /> +91 79079 95275</strong><br />
-                <br />
-                <a href="mailto:ilahialaw@gmail.com" style="font-weight: 600; color: #1e1e4b !important;">
-                  <img src="static/images/gmail.png" alt="Gmail Icon" style="height: 25px; vertical-align: middle; margin-right: 5px;" />
-                  ilahialaw@gmail.com
-                </a>
-              </div>
-            </div>
-            <br />
-            <div class="col-md-2 text-md-right text-center">
-              <div class="mt-2">
-                {% comment %} <a href="#" class="mx-1"><i class="fab fa-facebook text-dark fs-3"></i></a> {% endcomment %}
-                <a href="https://www.instagram.com/ilahia.law/?igsh=MWJpNjd6N203YXBsag%3D%3D#" class="mx-1"><img src="static/images/instagram.png" alt="Gmail Icon" style="height: 35px; vertical-align: middle; margin-right: 5px;" /></a>
-                {% comment %} <small class="text-muted ml-2" style="font-weight: 600; color: #1e1e4b !important;">April 24, 2025</small> {% endcomment %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 60px;">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
-
-          <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav mx-auto text-center">
-              <li class="nav-item">
-                <a class="nav-link" href="/">HOME</a>
-              </li>
-              <li class="nav-item dropdown view">
-                <a href="about" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="">About Us</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Vision</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Mission</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Values</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <a class="dropdown-item" href="managements">Management</a>
-                  <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
-                  <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
-                  <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
-                  <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
-                </div>
-              </li>
-              {% comment %} <li class="nav-item @@courses">
-                <a class="nav-link" href="courses">COURSES</a>
-              </li> {% endcomment %}
-              <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMISSIONS</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="courses">Courses</a>
-                  <a class="dropdown-item" href="admission_process">Admission Process</a>
-                  {% comment %} <a class="dropdown-item" href="fee_structure">Fee Structure</a> {% endcomment %}
-                </div>
-              </li>
-              <li class="nav-item @@programs">
-                <a class="nav-link" href="programs">PROGRAMS</a>
-              </li>
-              <li class="nav-item dropdown view">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CAMPUS LIFE</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="gallery">Gallery</a>
-                  <a class="dropdown-item" href="facilities">Facilities</a>
-                  <a class="dropdown-item" href="achievements">Our Achievements</a>
-                  {% comment %} <a class="dropdown-item" href="statutory">Statutory Units</a> {% endcomment %}
-                  <a class="dropdown-item" href="rules">Rules & Regulations</a>
-                  <a class="dropdown-item" href="committee">Statutory Committee</a>
-                </div>
-              </li>
-              <li class="nav-item @@contact">
-                <a class="nav-link" href="contactpage">CONTACT US</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Mobile Header (Hidden on Desktop) -->
-    <header class="d-lg-none mobile-header">
-      <div class="bg-white py-2 border-bottom">
-        <div class="container-fluid">
-          <!-- Mobile Top Bar -->
-          <div class="row align-items-center">
-            <div class="col-12 text-center">
-              <img src="static/images/ilahialogo.png" alt="logo" class="mobile-logo" style="height: 70px; border-radius: 50%;" />
-              <div class="text-center mt-2">
-                <h5 class="mb-0 font-weight-bold">ILAHIA LAW COLLEGE</h5>
-                <small>Muvattupuzha, Kerala - 686673</small>
-              </div>
-            </div>
-
-            <!-- Mobile Contact Info -->
-            <div class="col-12 text-center mt-2">
-              <div>
-                <strong class="text-dark"><img src="static/images/call.png" alt="Gmail Icon" style="height: 15px; vertical-align: middle; margin-right: 5px;" /> +91 79079 95275</strong><br />
-                <br>
-                <a href="mailto:ilahialaw@gmail.com" class="text-dark"><img src="static/images/gmail.png" alt="Gmail Icon" style="height: 25px; vertical-align: middle; margin-right: 5px;" /> ilahialaw@gmail.com</a>
-              </div>
-              <div class="mt-2">
-                <a href="https://www.instagram.com/ilahia.law/" class="mx-1"><img src="static/images/instagram.png" alt="Gmail Icon" style="height: 35px; vertical-align: middle; margin-right: 5px;" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <nav class="navbar navbar-light bg-light border-top border-bottom">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar"><span class="navbar-toggler-icon"></span></button>
-
-          <div class="collapse navbar-collapse" id="mobileNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/">HOME</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">ABOUT US</a>
-                <div class="dropdown-menu">
-                  <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="">About Us</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Vision</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Mission</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="">Our Values</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <a class="dropdown-item" href="managements">Management</a>
-                  <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
-                  <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
-                  <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
-                  <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
-                </div>
-              </li>
-              {% comment %} <li class="nav-item">
-                <a class="nav-link" href="courses">COURSES</a>
-              </li> {% endcomment %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">ADMISSIONS</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="admission_process">Admission Process</a>
-                  <a class="dropdown-item" href="courses">Courses</a>
-                  {% comment %} <a class="dropdown-item" href="fee_structure">Fee Structure</a> {% endcomment %}
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="programs">PROGRAMS</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CAMPUS LIFE</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="gallery">Gallery</a>
-                  <a class="dropdown-item" href="facilities">Facilities</a>
-                  <a class="dropdown-item" href="achievements">Achievements</a>
-                  {% comment %} <a class="dropdown-item" href="statutory">Statutory Units</a> {% endcomment %}
-                  <a class="dropdown-item" href="rules">Rules and Regulations</a>
-                  <a class="dropdown-item" href="committee">Statutory Committee</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactpage">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- WhatsApp and Call Buttons -->
-    <div class="fixed-buttons">
-      <!-- WhatsApp Button -->
-      <a href="https://wa.me/917907995275" class="btn-whatsapp-pulse whatsapp-button btn btn-success" aria-label="WhatsApp Us" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-
-      <!-- Call Button -->
-      <a href="tel:+917907995275" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
-    </div>
-
-    {% block content %}
-
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {% block title %}
+    Home | Ilahia Law College
     {% endblock %}
+  </title>
 
-    <!-- footer -->
-    <footer>
-      <!-- footer content -->
-      <div class="footer bg-footer section border-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
-              <!-- logo -->
-              <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="static/images/ilahialogo.png" alt="logo" style="height: 100px; width: 100px" /></a>
-              <ul class="list-unstyled text-white">
-                <li class="mb-2">Ilahia Nagar, Muvattupuzha Ernakulam District, Kerala India - 686673</li>
-                <li class="mb-2">+91 79079 95275</li>
-                <li class="mb-2">ilahialaw@gmail.com</li>
-              </ul>
+  <!-- Favicon link -->
+  <link rel="icon" href="static/images/ilahialogo.png" type="image/png" style="width: auto; height: auto;" />
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="static/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <!-- slick slider -->
+  <link rel="stylesheet" href="static/plugins/slick/slick.css" />
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="static/plugins/themify-icons/themify-icons.css" />
+  <!-- animation css -->
+  <link rel="stylesheet" href="static/plugins/animate/animate.css" />
+  <!-- aos -->
+  <link rel="stylesheet" href="static/plugins/aos/aos.css" />
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="static/plugins/venobox/venobox.css" />
+
+  <!-- Main Stylesheet -->
+  <link href="static/css/style.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="loader-container">
+    <!-- Centered Logo Image -->
+    <img src="static/images/logo1.png" alt="Ilahia Law College Logo" class="loader-logo" />
+
+    <!-- Animated Loading Text -->
+    <div class="loader"></div>
+  </div>
+
+  <!-- header -->
+  <header class="d-none d-lg-block fixed-top">
+    <!-- Top Bar -->
+    <div class="bg-white py-2 border-bottom">
+      <div class="container-fluid">
+        <div class="row align-items-center text-center text-md-left">
+          <!-- Logo and College Name -->
+          <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
+            <img src="static/images/ilahialogo.png" alt="logo" class="mr-2"
+              style="height: 100px; border-radius: 50%; box-shadow: 0 4px 12px #b2b2b3;" />
+
+            <div class="text-left">
+              <h5 class="mb-0 font-weight-bold">ILAHIA LAW COLLEGE</h5>
+              <small>Muvattupuzha, Kerala - 686673</small>
             </div>
-            <!-- about -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-              <h4 class="text-white mb-5">ABOUT</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <a class="text-color" href="aboutus">About Us</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="managements">Management</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="admission_process">Admissions</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="contact">Contact</a>
-                </li>
-              </ul>
+          </div>
+
+          <!-- Center Logos -->
+          <div class="col-md-4 d-flex justify-content-center align-items-center flex-wrap" style="margin-left: -50px;">
+            {% comment %} <img src="https://glcekm.com/wp-content/uploads/2021/12/image.png" alt="logo" class="mx-1"
+              style="height: 80px; margin-right: 110px!important;" />
+            <img src="https://glcekm.com/wp-content/uploads/2020/11/kerala.png" alt="logo" class="mx-1"
+              style="height: 80px;" /> {% endcomment %}
+          </div>
+
+          <!-- Right-side Contact & Social -->
+          <div class="col-md-2 text-md-right text-center">
+            <div>
+              <strong class="text-dark"><img src="static/images/call.png" alt="Gmail Icon"
+                  style="height: 20px; vertical-align: middle; margin-right: 5px;" /> +91 79079 95275</strong><br />
+              <br />
+              <a href="mailto:ilahialaw@gmail.com" style="font-weight: 600; color: #1e1e4b !important;">
+                <img src="static/images/gmail.png" alt="Gmail Icon"
+                  style="height: 25px; vertical-align: middle; margin-right: 5px;" />
+                ilahialaw@gmail.com
+              </a>
             </div>
-            <!-- academics -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-              <h4 class="text-white mb-5">ACADEMICS</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <a class="text-color" href="courses">Courses</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="facilities">Facilities</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="programs">Programs</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="gallery">Gallery</a>
-                </li>
-              </ul>
-            </div>
-            <!-- student support -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-              <h4 class="text-white mb-5">STUDENT SUPPORT</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <a class="text-color" href="">Internships</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">Legal Aid Clinic</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">Career Guidance</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">FAQs</a>
-                </li>
-              </ul>
-            </div>
-            <!-- research & publications -->
-            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-              <h4 class="text-white mb-5">RESEARCH & PUBLICATIONS</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <a class="text-color" href="">Law Journals</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">Research Papers</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">Conferences</a>
-                </li>
-                <li class="mb-3">
-                  <a class="text-color" href="">Publications</a>
-                </li>
-              </ul>
+          </div>
+          <br />
+          <div class="col-md-2 text-md-right text-center">
+            <div class="mt-2">
+              {% comment %} <a href="#" class="mx-1"><i class="fab fa-facebook text-dark fs-3"></i></a> {% endcomment %}
+              <a href="https://www.instagram.com/ilahia.law/?igsh=MWJpNjd6N203YXBsag%3D%3D#" class="mx-1"><img
+                  src="static/images/instagram.png" alt="Gmail Icon"
+                  style="height: 35px; vertical-align: middle; margin-right: 5px;" /></a>
+              {% comment %} <small class="text-muted ml-2" style="font-weight: 600; color: #1e1e4b !important;">April
+                24, 2025</small> {% endcomment %}
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- copyright -->
-      <div class="copyright py-4 bg-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 text-sm-left text-center text-white">
-              <p class="mb-0 text-white">
-                Copyright<script>
-                           document.write(new Date().getFullYear())
-                         </script>© Developed and Designed By <a href="https://www.inspirezesttechnologies.com/"><b>Inspirezest Technologies</b></a>
-              </p>All Rights Reserved.
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 60px;">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"><span
+            class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item dropdown view">
+              <a href="about" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="">About Us</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Vision</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Mission</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Values</a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="dropdown-item" href="managements">Management</a>
+                <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
+                <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
+                <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
+                <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown view">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">ADMISSIONS</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="courses">Courses</a>
+                <a class="dropdown-item" href="admission_process">Admission Process</a>
+                {% comment %} <a class="dropdown-item" href="fee_structure">Fee Structure</a> {% endcomment %}
+              </div>
+            </li>
+            <li class="nav-item @@programs">
+              <a class="nav-link" href="programs">PROGRAMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iqac">IQAC</a>
+            </li>
+            <li class="nav-item dropdown view">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">CAMPUS LIFE</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="gallery">Gallery</a>
+                <a class="dropdown-item" href="facilities">Facilities</a>
+                <a class="dropdown-item" href="achievements">Our Achievements</a>
+                {% comment %} <a class="dropdown-item" href="statutory">Statutory Units</a> {% endcomment %}
+                <a class="dropdown-item" href="rules">Rules & Regulations</a>
+                <a class="dropdown-item" href="committee">Statutory Committee</a>
+              </div>
+            </li>
+            <li class="nav-item @@contact">
+              <a class="nav-link" href="contactpage">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Header (Hidden on Desktop) -->
+  <header class="d-lg-none mobile-header">
+    <div class="bg-white py-2 border-bottom">
+      <div class="container-fluid">
+        <!-- Mobile Top Bar -->
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <img src="static/images/ilahialogo.png" alt="logo" class="mobile-logo"
+              style="height: 70px; border-radius: 50%;" />
+            <div class="text-center mt-2">
+              <h5 class="mb-0 font-weight-bold">ILAHIA LAW COLLEGE</h5>
+              <small>Muvattupuzha, Kerala - 686673</small>
             </div>
-            <div class="col-sm-5 text-sm-right text-center">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a class="d-inline-block p-2" href=""><i class="ti-facebook text-white"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="d-inline-block p-2" href=""><i class="ti-twitter-alt text-white"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="d-inline-block p-2" href="https://www.instagram.com/ilahialaw?igsh=MTFpb3ZrMnl0bTMx"><i class="ti-instagram text-white"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="d-inline-block p-2" href=""><i class="ti-dribbble text-white"></i></a>
-                </li>
-              </ul>
+          </div>
+
+          <!-- Mobile Contact Info -->
+          <div class="col-12 text-center mt-2">
+            <div>
+              <strong class="text-dark"><img src="static/images/call.png" alt="Gmail Icon"
+                  style="height: 15px; vertical-align: middle; margin-right: 5px;" /> +91 79079 95275</strong><br />
+              <br>
+              <a href="mailto:ilahialaw@gmail.com" class="text-dark"><img src="static/images/gmail.png" alt="Gmail Icon"
+                  style="height: 25px; vertical-align: middle; margin-right: 5px;" /> ilahialaw@gmail.com</a>
+            </div>
+            <div class="mt-2">
+              <a href="https://www.instagram.com/ilahia.law/" class="mx-1"><img src="static/images/instagram.png"
+                  alt="Gmail Icon" style="height: 35px; vertical-align: middle; margin-right: 5px;" /></a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- /footer -->
+    </div>
 
-    <style>
-      .dropdown-submenu {
-        position: relative;
-      }
-      
-      .dropdown-submenu .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -1px;
-        display: none;
-        position: absolute;
-      }
-      
-      .dropdown-submenu:hover .dropdown-menu {
-        display: block;
-      }
-    </style>
+    <!-- Mobile Navigation -->
+    <nav class="navbar navbar-light bg-light border-top border-bottom">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNavbar"><span
+            class="navbar-toggler-icon"></span></button>
 
-    <!-- jQuery -->
-    <script src="static/plugins/jQuery/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="static/plugins/bootstrap/bootstrap.min.js"></script>
-    <!-- slick slider -->
-    <script src="static/plugins/slick/slick.min.js"></script>
-    <!-- aos -->
-    <script src="static/plugins/aos/aos.js"></script>
-    <!-- venobox popup -->
-    <script src="static/plugins/venobox/venobox.min.js"></script>
-    <!-- mixitup filter -->
-    <script src="static/plugins/mixitup/mixitup.min.js"></script>
-    <!-- google map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
-    <script src="static/plugins/google-map/gmap.js"></script>
+        <div class="collapse navbar-collapse" id="mobileNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">ABOUT US</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="aboutus">College Profile</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="">About Us</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Vision</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Mission</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="">Our Values</a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="dropdown-item" href="managements">Management</a>
+                <a class="dropdown-item" href="principal_desk">Principal's Desk</a>
+                <a class="dropdown-item" href="chairmans_desk">Chairman's Desk</a>
+                <a class="dropdown-item" href="admindesk">Administrator's Desk</a>
+                <a class="dropdown-item" href="facultydesk">Faculty's Desk</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">ADMISSIONS</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="admission_process">Admission Process</a>
+                <a class="dropdown-item" href="courses">Courses</a>
+                {% comment %} <a class="dropdown-item" href="fee_structure">Fee Structure</a> {% endcomment %}
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="programs">PROGRAMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iqac">IQAC</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CAMPUS LIFE</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="gallery">Gallery</a>
+                <a class="dropdown-item" href="facilities">Facilities</a>
+                <a class="dropdown-item" href="achievements">Achievements</a>
+                {% comment %} <a class="dropdown-item" href="statutory">Statutory Units</a> {% endcomment %}
+                <a class="dropdown-item" href="rules">Rules and Regulations</a>
+                <a class="dropdown-item" href="committee">Statutory Committee</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactpage">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Main Script -->
-    <script src="static/js/script.js"></script>
-    <script src="static/js/loader.js"></script>
-    <script src="static/js/banner.js"></script>
-    <script src="static/js/gallery.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init()
-    </script>
-  </body>
+  <!-- WhatsApp and Call Buttons -->
+  <div class="fixed-buttons">
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917907995275" class="btn-whatsapp-pulse whatsapp-button btn btn-success"
+      aria-label="WhatsApp Us" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Call Button -->
+    <a href="tel:+917907995275" class="btn-whatsapp-pulse call-button btn btn-primary" aria-label="Call Us"><i
+        class="fa-solid fa-phone"></i></a>
+  </div>
+
+  {% block content %}
+
+  {% endblock %}
+
+  <!-- footer -->
+  <footer>
+    <!-- footer content -->
+    <div class="footer bg-footer section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+            <!-- logo -->
+            <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="static/images/ilahialogo.png" alt="logo"
+                style="height: 100px; width: 100px" /></a>
+            <ul class="list-unstyled text-white">
+              <li class="mb-2">Ilahia Nagar, Muvattupuzha Ernakulam District, Kerala India - 686673</li>
+              <li class="mb-2">+91 79079 95275</li>
+              <li class="mb-2">ilahialaw@gmail.com</li>
+            </ul>'
+            <br>
+            <br>
+            <a class="logo-footer" href="https://www.mgu.ac.in"><img class="img-fluid mb-4" src="https://upload.wikimedia.org/wikipedia/en/a/ad/Mahatma_Gandhi_University%2C_Kerala_Logo.svg" alt="logo" style="height: 70px; width: 70px" /></a>
+            <a class="logo-footer" href="https://www.barcouncilofindia.org/home"><img class="img-fluid mb-4" src="https://upload.wikimedia.org/wikipedia/en/6/6e/Logo_of_Bar_Council_of_India.png" alt="logo" style="height: 70px; width: 70px" /></a>
+            <a class="logo-footer" href="https://www.sci.gov.in"><img class="img-fluid mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Insignia_of_the_Supreme_Court_of_India.svg/1200px-Insignia_of_the_Supreme_Court_of_India.svg.png" alt="logo" style="height: 70px; width: 70px" /></a>
+            <a class="logo-footer" href="https://highcourt.kerala.gov.in"><img class="img-fluid mb-4" src="https://architexturez.net/data/styles/az_cf_core_l-region-content/public/media/delhi-high-court-logo.png?itok=KJW6nNDi" alt="logo" style="height: 70px; width: 70px" /></a>
+          </div>
+          <!-- about -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">ABOUT</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-color" href="aboutus">About Us</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="managements">Management</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="admission_process">Admissions</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- academics -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">ACADEMICS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-color" href="courses">Courses</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="facilities">Facilities</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="programs">Programs</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="gallery">Gallery</a>
+              </li>
+            </ul>
+          </div>
+          <!-- student support -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">STUDENT SUPPORT</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-color" href="">Internships</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">Legal Aid Clinic</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">Career Guidance</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!-- research & publications -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+            <h4 class="text-white mb-5">RESEARCH & PUBLICATIONS</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a class="text-color" href="">Law Journals</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">Research Papers</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">Conferences</a>
+              </li>
+              <li class="mb-3">
+                <a class="text-color" href="">Publications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="copyright py-4 bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 text-sm-left text-center text-white">
+            <p class="mb-0 text-white">
+              Copyright
+              <script>
+                document.write(new Date().getFullYear())
+              </script>© Developed and Designed By <a href="https://www.inspirezesttechnologies.com/"><b>Inspirezest
+                  Technologies</b></a>
+            </p>All Rights Reserved.
+          </div>
+          <div class="col-sm-5 text-sm-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" href=""><i class="ti-facebook text-white"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" href=""><i class="ti-twitter-alt text-white"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" href="https://www.instagram.com/ilahialaw?igsh=MTFpb3ZrMnl0bTMx"><i
+                    class="ti-instagram text-white"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="d-inline-block p-2" href=""><i class="ti-dribbble text-white"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <style>
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -1px;
+      display: none;
+      position: absolute;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+
+  <!-- jQuery -->
+  <script src="static/plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="static/plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="static/plugins/slick/slick.min.js"></script>
+  <!-- aos -->
+  <script src="static/plugins/aos/aos.js"></script>
+  <!-- venobox popup -->
+  <script src="static/plugins/venobox/venobox.min.js"></script>
+  <!-- mixitup filter -->
+  <script src="static/plugins/mixitup/mixitup.min.js"></script>
+  <!-- google map -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+  <script src="static/plugins/google-map/gmap.js"></script>
+
+  <!-- Main Script -->
+  <script src="static/js/script.js"></script>
+  <script src="static/js/loader.js"></script>
+  <script src="static/js/banner.js"></script>
+  <script src="static/js/gallery.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init()
+  </script>
+</body>
+
 </html>
